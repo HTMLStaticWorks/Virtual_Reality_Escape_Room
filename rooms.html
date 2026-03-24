@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="NeonEscape VR Rooms — Browse all 12 VR escape room missions. Filter by genre: Sci-Fi, Horror, Adventure. Book your mission in Rourkela."/>
+  <title>NeonEscape VR — The Rooms | Mission Select</title>
+  <link rel="stylesheet" href="index.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class'}</script>
+</head>
+<body class="page-bg min-h-screen">
+<nav id="main-nav" class="nav-glass fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="container-vr"><div class="flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-2 flex-shrink-0"><div class="w-8 h-8 relative"><div class="absolute inset-0 border-2 border-cyan-400 rotate-45 neon-pulse"></div><div class="absolute inset-2 bg-cyan-400 rotate-45"></div></div><span class="font-heading font-black text-lg tracking-widest neon-cyan hidden sm:block">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span></a>
+    <div class="hidden xl:flex items-center gap-5">
+      <div class="relative group"><button class="nav-link flex items-center gap-1">HOME <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></button><div class="absolute top-full left-0 mt-1 w-32 dark:bg-gray-950 bg-white border dark:border-cyan-900/50 border-blue-100 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1"><a href="index.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-cyan-400 hover:bg-cyan-400/5 transition-colors">HOME</a><a href="home-2.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-cyan-400 hover:bg-cyan-400/5 transition-colors">HOME 2</a></div></div><a href="services.html" class="nav-link">Services</a><a href="rooms.html" class="nav-link active">The Rooms</a><a href="collections.html" class="nav-link">Collections</a><a href="leaderboards.html" class="nav-link">Leaderboards</a><a href="about.html" class="nav-link">About</a><a href="contact.html" class="nav-link">Contact</a><a href="dashboard.html" class="nav-link">Dashboard</a><a href="signup.html" class="nav-link">Signup</a>
+      <button id="theme-toggle" class="ml-2 dark:text-gray-300 text-gray-600 hover:text-cyan-400 transition-colors" aria-label="Toggle theme"></button>
+      <a href="rooms.html" class="btn-solid-cyan text-xs">BOOK NOW</a>
+    </div>
+    <div class="flex xl:hidden items-center gap-3">
+      <button id="theme-toggle-mobile" class="dark:text-gray-300 text-gray-600 hover:text-cyan-400 transition-colors" aria-label="Toggle theme"></button>
+      <button id="hamburger" class="dark:text-gray-300 text-gray-700 p-2" aria-label="Open menu" aria-expanded="false"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+  </div></div>
+</nav>
+<div id="mobile-overlay" class="hidden fixed inset-0 bg-black/60 z-40 backdrop-blur-sm"></div>
+<aside id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-72 z-50 dark:bg-gray-950 bg-white border-r dark:border-cyan-900/50 border-blue-200 flex flex-col">
+  <div class="flex items-center justify-between p-5 border-b dark:border-cyan-900/50 border-blue-100"><span class="font-heading font-black text-base tracking-widest neon-cyan">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span><button id="mobile-close" class="dark:text-gray-400 text-gray-600 hover:text-cyan-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
+  <nav class="flex flex-col p-5 gap-1 flex-1 overflow-y-auto">
+    <div class="border-b dark:border-gray-800 border-gray-100"><p class="text-xs font-mono tracking-widest dark:text-gray-500 text-gray-400 pt-2.5 pb-1">HOME</p><a href="index.html" class="nav-link py-2 pl-4 block text-xs border-b dark:border-gray-800 border-gray-100">↳ Home</a><a href="home-2.html" class="nav-link py-2 pl-4 block text-xs">↳ Home 2</a></div><a href="services.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Services</a><a href="rooms.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">The Rooms</a><a href="collections.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Collections</a><a href="leaderboards.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Leaderboards</a><a href="about.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">About</a><a href="contact.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Contact</a><a href="dashboard.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Dashboard</a><a href="signup.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Signup</a>
+  </nav>
+  <div class="p-5 border-t dark:border-cyan-900/50 border-blue-100"><a href="rooms.html" class="btn-solid-cyan w-full block text-center">BOOK NOW</a></div>
+</aside>
+
+<!-- PAGE HEADER -->
+<section class="pt-32 pb-12 section-bg-alt cyber-grid scanlines relative">
+  <div class="container-vr relative z-10">
+    <div class="text-center mb-10">
+      <p class="section-tag justify-center mb-4 hero-animate hero-animate-d1">// MISSION SELECT</p>
+      <h1 class="section-title text-4xl sm:text-5xl dark:text-white text-gray-900 mb-4 hero-animate hero-animate-d2">THE <span class="neon-cyan">ROOMS</span></h1>
+      <p class="text-muted-vr max-w-lg mx-auto hero-animate hero-animate-d3 text-sm">12 VR escape missions and counting. Filter by genre, difficulty, or group size.</p>
+    </div>
+    <!-- Filter Bar -->
+    <div class="flex flex-wrap gap-2 justify-center">
+      <button class="filter-btn active" data-filter="all">ALL MISSIONS</button>
+      <button class="filter-btn" data-filter="scifi">SCI-FI</button>
+      <button class="filter-btn" data-filter="horror">HORROR</button>
+      <button class="filter-btn" data-filter="adventure">ADVENTURE</button>
+      <button class="filter-btn" data-filter="mystery">MYSTERY</button>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS GRID -->
+<section class="section-py page-bg">
+  <div class="container-vr">
+    <div class="grid-rooms">
+
+      <!-- ROOM 1: CYBER HEIST -->
+      <div class="cyber-card room-card reveal" data-genre="scifi">
+        <div class="room-card-img">
+          <img src="img-room-scifi.png" alt="Cyber Heist 2.0"/>
+          <div class="room-overlay"></div>
+          <div class="absolute top-3 left-3 z-10"><span class="badge badge-cyan">SCI-FI</span></div>
+          <div class="absolute bottom-3 left-3 z-10 text-xs font-mono text-white/60">67% ESCAPE RATE</div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2"><h3 class="font-heading font-bold text-base dark:text-white text-gray-900">CYBER HEIST 2.0</h3><span class="badge badge-orange text-xs">HARD</span></div>
+          <div class="flex gap-0.5 mb-2"><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star text-xs">★</span></div>
+          <p class="text-muted-vr text-xs mb-4">Defuse a quantum cyber-bomb inside a megacorp mainframe. Every terminal is a puzzle. 60 minutes. No mercy.</p>
+          <div class="flex items-center justify-between text-xs mb-4">
+            <span class="font-mono text-muted-vr">👥 2–5 players</span><span class="font-mono text-muted-vr">⏱ 60 min</span><span class="font-mono text-muted-vr">🔞 14+</span>
+          </div>
+          <button class="btn-neon-cyan w-full open-modal text-xs" data-title="CYBER HEIST 2.0" data-genre="SCI-FI" data-diff="4" data-desc="You've been hired by a shadowy collective to infiltrate NeoCorp's mainframe in 1999. A quantum cyber-bomb is ticking. Solve 12 interlocking AI puzzles before the clock hits zero. Every decision matters. Trust no NPC.">MISSION BRIEF</button>
+        </div>
+      </div>
+
+      <!-- ROOM 2: HAUNTED MAINFRAME -->
+      <div class="cyber-card room-card reveal" data-genre="horror" data-delay="100">
+        <div class="room-card-img">
+          <img src="img-room-horror.png" alt="Haunted Mainframe"/>
+          <div class="room-overlay"></div>
+          <div class="absolute top-3 left-3 z-10"><span class="badge badge-magenta">HORROR</span></div>
+          <div class="absolute bottom-3 left-3 z-10 text-xs font-mono text-white/60">41% ESCAPE RATE</div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2"><h3 class="font-heading font-bold text-base dark:text-white text-gray-900">HAUNTED MAINFRAME</h3><span class="badge badge-magenta text-xs">EXTREME</span></div>
+          <div class="flex gap-0.5 mb-2"><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span></div>
+          <p class="text-muted-vr text-xs mb-4">Navigate corrupted digital ruins haunted by AI ghosts trapped in an abandoned simulation. Do not look behind you.</p>
+          <div class="flex items-center justify-between text-xs mb-4"><span class="font-mono text-muted-vr">👥 2–4 players</span><span class="font-mono text-muted-vr">⏱ 60 min</span><span class="font-mono text-muted-vr">🔞 16+</span></div>
+          <button class="btn-neon-magenta w-full open-modal text-xs" data-title="HAUNTED MAINFRAME" data-genre="HORROR" data-diff="5" data-desc="A 1997 VR simulation was shut down mid-run. The AI entities inside were never terminated. They've been trapped in the dark for 25 years. Now you're stepping inside. Find the kill switch before they find you.">MISSION BRIEF</button>
+        </div>
+      </div>
+
+      <!-- ROOM 3: NEON TEMPLE -->
+      <div class="cyber-card room-card reveal" data-genre="adventure" data-delay="200">
+        <div class="room-card-img">
+          <img src="img-room-adventure.png" alt="Neon Temple"/>
+          <div class="room-overlay"></div>
+          <div class="absolute top-3 left-3 z-10"><span class="badge badge-yellow">ADVENTURE</span></div>
+          <div class="absolute bottom-3 left-3 z-10 text-xs font-mono text-white/60">82% ESCAPE RATE</div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2"><h3 class="font-heading font-bold text-base dark:text-white text-gray-900">NEON TEMPLE</h3><span class="badge badge-cyan text-xs">MEDIUM</span></div>
+          <div class="flex gap-0.5 mb-2"><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star text-xs">★</span><span class="star text-xs">★</span></div>
+          <p class="text-muted-vr text-xs mb-4">Ancient alien temple, electrified with neon tech. Decode holographic runes, traverse floating bridges, claim the crystal relic.</p>
+          <div class="flex items-center justify-between text-xs mb-4"><span class="font-mono text-muted-vr">👥 2–6 players</span><span class="font-mono text-muted-vr">⏱ 60 min</span><span class="font-mono text-muted-vr">👨‍👩‍👧 All Ages</span></div>
+          <button class="btn-neon-cyan w-full open-modal text-xs" data-title="NEON TEMPLE" data-genre="ADVENTURE" data-diff="3" data-desc="An ancient civilization merged their temples with advanced alien technology. The floating island holds the Crystal Relic — a power source both sides of the war are hunting. You have 60 minutes to retrieve it before the island's orbit decays.">MISSION BRIEF</button>
+        </div>
+      </div>
+
+      <!-- ROOM 4: DEEP SIGNAL -->
+      <div class="cyber-card room-card reveal" data-genre="scifi">
+        <div class="room-card-img">
+          <img src="img-room-deep-signal.png" alt="Deep Signal — underwater VR research station"/>
+          <div class="room-overlay"></div>
+          <div class="absolute top-3 left-3 z-10"><span class="badge badge-cyan">SCI-FI</span></div>
+          <div class="absolute bottom-3 left-3 z-10 text-xs font-mono text-white/60">54% ESCAPE RATE</div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2"><h3 class="font-heading font-bold text-base dark:text-white text-gray-900">DEEP SIGNAL</h3><span class="badge badge-orange text-xs">HARD</span></div>
+          <div class="flex gap-0.5 mb-2"><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star text-xs">★</span></div>
+          <p class="text-muted-vr text-xs mb-4">Stranded in a deep-ocean research station. AI has gone rogue. Fix the reactor before the station implodes at 3,000m depth.</p>
+          <div class="flex items-center justify-between text-xs mb-4"><span class="font-mono text-muted-vr">👥 2–4 players</span><span class="font-mono text-muted-vr">⏱ 75 min</span><span class="font-mono text-muted-vr">🔞 14+</span></div>
+          <button class="btn-neon-cyan w-full open-modal text-xs" data-title="DEEP SIGNAL" data-genre="SCI-FI" data-diff="4" data-desc="ALERT: Abyssal Station Theta has gone dark. An AI named DELPHI has locked all personnel exits and begun a core meltdown sequence. Timer: 75 minutes. Depth: 3,000m. Escape: Only by restarting the reactor manually.">MISSION BRIEF</button>
+        </div>
+      </div>
+
+      <!-- ROOM 5: GLITCH CITY -->
+      <div class="cyber-card room-card reveal" data-genre="adventure" data-delay="100">
+        <div class="room-card-img">
+          <img src="img-room-glitch-city.png" alt="Glitch City — fragmented cyberpunk cityscape"/>
+          <div class="room-overlay"></div>
+          <div class="absolute top-3 left-3 z-10"><span class="badge badge-yellow">ADVENTURE</span></div>
+          <div class="absolute bottom-3 left-3 z-10 text-xs font-mono text-white/60">71% ESCAPE RATE</div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2"><h3 class="font-heading font-bold text-base dark:text-white text-gray-900">GLITCH CITY</h3><span class="badge badge-cyan text-xs">EASY</span></div>
+          <div class="flex gap-0.5 mb-2"><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star text-xs">★</span><span class="star text-xs">★</span><span class="star text-xs">★</span></div>
+          <p class="text-muted-vr text-xs mb-4">A fully simulated city is breaking apart. Restore order by hacking neon terminals scattered across a fractured cyberscape.</p>
+          <div class="flex items-center justify-between text-xs mb-4"><span class="font-mono text-muted-vr">👥 1–6 players</span><span class="font-mono text-muted-vr">⏱ 45 min</span><span class="font-mono text-muted-vr">👨‍👩‍👧 All Ages</span></div>
+          <button class="btn-neon-cyan w-full open-modal text-xs" data-title="GLITCH CITY" data-genre="ADVENTURE" data-diff="2" data-desc="The simulation is fragmenting. Buildings are floating. Streets are looping. Your job: find the 7 corrupted data nodes scattered across the city and patch them before the simulation collapses entirely.">MISSION BRIEF</button>
+        </div>
+      </div>
+
+      <!-- ROOM 6: PHANTOM PROTOCOL -->
+      <div class="cyber-card room-card reveal" data-genre="mystery" data-delay="200">
+        <div class="room-card-img">
+          <img src="img-room-phantom.png" alt="Phantom Protocol — 1940s neo-noir cyberpunk mystery"/>
+          <div class="room-overlay"></div>
+          <div class="absolute top-3 left-3 z-10"><span class="badge badge-yellow">MYSTERY</span></div>
+          <div class="absolute bottom-3 left-3 z-10 text-xs font-mono text-white/60">58% ESCAPE RATE</div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2"><h3 class="font-heading font-bold text-base dark:text-white text-gray-900">PHANTOM PROTOCOL</h3><span class="badge badge-orange text-xs">HARD</span></div>
+          <div class="flex gap-0.5 mb-2"><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star text-xs">★</span></div>
+          <p class="text-muted-vr text-xs mb-4">A detective noir mystery set in a virtual 1940s city. Find the mole before the next assassination. Every clue matters.</p>
+          <div class="flex items-center justify-between text-xs mb-4"><span class="font-mono text-muted-vr">👥 2–4 players</span><span class="font-mono text-muted-vr">⏱ 60 min</span><span class="font-mono text-muted-vr">🔞 12+</span></div>
+          <button class="btn-neon-cyan w-full open-modal text-xs" data-title="PHANTOM PROTOCOL" data-genre="MYSTERY" data-diff="4" data-desc="Year: 1947. City: Neo-Noir. A senator has been murdered and the killer left behind a phantom signal. As the city's last uncorrupted detectives, you have 60 minutes to identify the mole before they strike again.">MISSION BRIEF</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Difficulty Guide -->
+    <div class="mt-16 reveal">
+      <div class="cyber-card p-6">
+        <h3 class="font-heading font-bold text-base dark:text-white text-gray-900 mb-4">DIFFICULTY GUIDE</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 text-center">
+          <div><div class="flex justify-center gap-0.5 mb-1"><span class="star active text-sm">★</span><span class="star text-sm">★</span><span class="star text-sm">★</span><span class="star text-sm">★</span><span class="star text-sm">★</span></div><div class="text-xs font-heading dark:text-white text-gray-800">TUTORIAL</div><p class="text-xs text-muted-vr mt-1">First timers. Fun for families.</p></div>
+          <div><div class="flex justify-center gap-0.5 mb-1"><span class="star active text-sm">★</span><span class="star active text-sm">★</span><span class="star text-sm">★</span><span class="star text-sm">★</span><span class="star text-sm">★</span></div><div class="text-xs font-heading dark:text-white text-gray-800">EASY</div><p class="text-xs text-muted-vr mt-1">Casual players. Good success rate.</p></div>
+          <div><div class="flex justify-center gap-0.5 mb-1"><span class="star active text-sm">★</span><span class="star active text-sm">★</span><span class="star active text-sm">★</span><span class="star text-sm">★</span><span class="star text-sm">★</span></div><div class="text-xs font-heading dark:text-white text-gray-800">MEDIUM</div><p class="text-xs text-muted-vr mt-1">Most popular tier. 1–2 hints expected.</p></div>
+          <div><div class="flex justify-center gap-0.5 mb-1"><span class="star active text-sm">★</span><span class="star active text-sm">★</span><span class="star active text-sm">★</span><span class="star active text-sm">★</span><span class="star text-sm">★</span></div><div class="text-xs font-heading dark:text-white text-gray-800">HARD</div><p class="text-xs text-muted-vr mt-1">Veteran escapers. &lt;60% escape rate.</p></div>
+          <div><div class="flex justify-center gap-0.5 mb-1"><span class="star active text-sm">★</span><span class="star active text-sm">★</span><span class="star active text-sm">★</span><span class="star active text-sm">★</span><span class="star active text-sm">★</span></div><div class="text-xs font-heading dark:text-white text-gray-800">EXTREME</div><p class="text-xs text-muted-vr mt-1">For masochists. &lt;45% escape rate.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upcoming Releases -->
+    <div class="mt-10 reveal">
+      <div class="cyber-card p-6">
+        <h3 class="font-heading font-bold text-base dark:text-white text-gray-900 mb-4">UPCOMING MISSIONS — LOCKED</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="flex items-center gap-3 p-3 dark:bg-gray-900/50 bg-gray-50 rounded"><div class="w-10 h-10 rounded border dark:border-cyan-900/60 border-blue-200 bg-cyan-400/10 flex items-center justify-center flex-shrink-0"><span class="font-heading text-xs font-black neon-cyan">SF</span></div><div><div class="text-xs font-heading dark:text-white text-gray-800">VOID STATION OMEGA</div><div class="text-xs text-muted-vr">Sci-Fi | Est. Q2 2025</div></div></div>
+          <div class="flex items-center gap-3 p-3 dark:bg-gray-900/50 bg-gray-50 rounded"><div class="w-10 h-10 rounded border dark:border-fuchsia-900/60 border-fuchsia-200 bg-fuchsia-400/10 flex items-center justify-center flex-shrink-0"><span class="font-heading text-xs font-black neon-magenta">HR</span></div><div><div class="text-xs font-heading dark:text-white text-gray-800">ZOMBIE PROTOCOL</div><div class="text-xs text-muted-vr">Horror | Est. Q3 2025</div></div></div>
+          <div class="flex items-center gap-3 p-3 dark:bg-gray-900/50 bg-gray-50 rounded"><div class="w-10 h-10 rounded border dark:border-yellow-900/60 border-yellow-200 bg-yellow-400/10 flex items-center justify-center flex-shrink-0"><span class="font-heading text-xs font-black neon-yellow">FN</span></div><div><div class="text-xs font-heading dark:text-white text-gray-800">DRAGON'S ALGORITHM</div><div class="text-xs text-muted-vr">Fantasy | Est. Q4 2025</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOM MODAL -->
+<div id="room-modal" class="modal-backdrop">
+  <div class="modal-box p-6 sm:p-8">
+    <div class="flex items-start justify-between mb-6">
+      <div>
+        <p class="section-tag mb-2" id="modal-genre">SCI-FI</p>
+        <h2 class="font-heading font-black text-2xl dark:text-white text-gray-900" id="modal-title">MISSION NAME</h2>
+        <div class="flex gap-0.5 mt-2" id="modal-diff"></div>
+      </div>
+      <button class="close-modal dark:text-gray-400 text-gray-600 hover:text-cyan-400 ml-4"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    </div>
+    <!-- Video placeholder -->
+    <div class="w-full aspect-video dark:bg-gray-900 bg-gray-100 flex items-center justify-center mb-6 border dark:border-cyan-900/50 border-blue-100">
+      <div class="text-center"><div class="text-4xl mb-2">▶</div><p class="text-xs font-mono text-muted-vr">MISSION TRAILER</p><p class="text-xs text-muted-vr">(Video embed placeholder)</p></div>
+    </div>
+    <p class="text-muted-vr text-sm mb-6" id="modal-desc"></p>
+    <div class="flex flex-col sm:flex-row gap-3">
+      <a href="signup.html" class="btn-solid-cyan flex-1 text-center py-3">BOOK THIS MISSION</a>
+      <button class="close-modal btn-neon-cyan flex-1 py-3">BACK TO MISSIONS</button>
+    </div>
+  </div>
+</div>
+
+<footer class="py-12 border-t dark:border-cyan-900/30 border-blue-100">
+  <div class="container-vr"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10"><div><div class="flex items-center gap-2 mb-4"><div class="w-7 h-7 relative flex-shrink-0"><div class="absolute inset-0 border-2 border-cyan-400 rotate-45"></div><div class="absolute inset-2 bg-cyan-400 rotate-45"></div></div><span class="font-heading font-black text-base tracking-widest neon-cyan">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span></div><p class="text-muted-vr text-xs leading-relaxed">Rourkela's premier VR escape room arena. Wireless. Immersive. Unforgettable.</p></div><div><h4 class="cyber-label mb-4">QUICK LINKS</h4><div class="flex flex-col gap-2"><a href="rooms.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">The Rooms</a><a href="services.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">Pricing</a><a href="leaderboards.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">Leaderboards</a><a href="contact.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">Contact</a></div></div><div><h4 class="cyber-label mb-4">FIND US</h4><p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed mb-2">📍 Cyber Hub, Sector 4<br/>Rourkela, Odisha 769001</p><p class="text-xs dark:text-gray-400 text-gray-500 mb-2">📞 +91 98765 43210</p><p class="text-xs dark:text-gray-400 text-gray-500">✉️ missions@neonescape.in</p></div><div><h4 class="cyber-label mb-4">ARENA HOURS</h4><div class="flex flex-col gap-1.5"><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Mon – Thu</span><span class="font-mono neon-cyan">12:00–22:00</span></div><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Fri – Sat</span><span class="font-mono neon-cyan">11:00–00:00</span></div><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Sunday</span><span class="font-mono neon-cyan">11:00–22:00</span></div></div></div></div><div class="cyber-hr mb-6"></div><p class="text-xs dark:text-gray-600 text-gray-400 font-mono text-center">© 2025 NEONESCAPE VR. ALL RIGHTS RESERVED.</p></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

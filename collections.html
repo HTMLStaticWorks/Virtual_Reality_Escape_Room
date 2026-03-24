@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="NeonEscape VR Collections — Curated bundles of VR escape room missions. Sci-Fi Collection, Horror Vault, Adventure Pack, and more."/>
+  <title>NeonEscape VR — Collections</title>
+  <link rel="stylesheet" href="index.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class'}</script>
+</head>
+<body class="page-bg min-h-screen">
+<nav id="main-nav" class="nav-glass fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="container-vr"><div class="flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-2 flex-shrink-0"><div class="w-8 h-8 relative"><div class="absolute inset-0 border-2 border-cyan-400 rotate-45 neon-pulse"></div><div class="absolute inset-2 bg-cyan-400 rotate-45"></div></div><span class="font-heading font-black text-lg tracking-widest neon-cyan hidden sm:block">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span></a>
+    <div class="hidden xl:flex items-center gap-5">
+      <div class="relative group"><button class="nav-link flex items-center gap-1">HOME <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></button><div class="absolute top-full left-0 mt-1 w-32 dark:bg-gray-950 bg-white border dark:border-cyan-900/50 border-blue-100 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1"><a href="index.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-cyan-400 hover:bg-cyan-400/5 transition-colors">HOME</a><a href="home-2.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-cyan-400 hover:bg-cyan-400/5 transition-colors">HOME 2</a></div></div><a href="services.html" class="nav-link">Services</a><a href="rooms.html" class="nav-link">The Rooms</a><a href="collections.html" class="nav-link active">Collections</a><a href="leaderboards.html" class="nav-link">Leaderboards</a><a href="about.html" class="nav-link">About</a><a href="contact.html" class="nav-link">Contact</a><a href="dashboard.html" class="nav-link">Dashboard</a><a href="signup.html" class="nav-link">Signup</a>
+      <button id="theme-toggle" class="ml-2 dark:text-gray-300 text-gray-600 hover:text-cyan-400 transition-colors" aria-label="Toggle theme"></button>
+      <a href="rooms.html" class="btn-solid-cyan text-xs">BOOK NOW</a>
+    </div>
+    <div class="flex xl:hidden items-center gap-3">
+      <button id="theme-toggle-mobile" class="dark:text-gray-300 text-gray-600 hover:text-cyan-400 transition-colors" aria-label="Toggle theme"></button>
+      <button id="hamburger" class="dark:text-gray-300 text-gray-700 p-2" aria-label="Open menu" aria-expanded="false"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+  </div></div>
+</nav>
+<div id="mobile-overlay" class="hidden fixed inset-0 bg-black/60 z-40 backdrop-blur-sm"></div>
+<aside id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-72 z-50 dark:bg-gray-950 bg-white border-r dark:border-cyan-900/50 border-blue-200 flex flex-col">
+  <div class="flex items-center justify-between p-5 border-b dark:border-cyan-900/50 border-blue-100"><span class="font-heading font-black text-base tracking-widest neon-cyan">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span><button id="mobile-close" class="dark:text-gray-400 text-gray-600 hover:text-cyan-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
+  <nav class="flex flex-col p-5 gap-1 flex-1 overflow-y-auto">
+    <div class="border-b dark:border-gray-800 border-gray-100"><p class="text-xs font-mono tracking-widest dark:text-gray-500 text-gray-400 pt-2.5 pb-1">HOME</p><a href="index.html" class="nav-link py-2 pl-4 block text-xs border-b dark:border-gray-800 border-gray-100">↳ Home</a><a href="home-2.html" class="nav-link py-2 pl-4 block text-xs">↳ Home 2</a></div><a href="services.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Services</a><a href="rooms.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">The Rooms</a><a href="collections.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Collections</a><a href="leaderboards.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Leaderboards</a><a href="about.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">About</a><a href="contact.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Contact</a><a href="dashboard.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Dashboard</a><a href="signup.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Signup</a>
+  </nav>
+  <div class="p-5 border-t dark:border-cyan-900/50 border-blue-100"><a href="rooms.html" class="btn-solid-cyan w-full block text-center">BOOK NOW</a></div>
+</aside>
+
+<!-- PAGE HEADER -->
+<section class="pt-32 pb-12 section-bg-alt cyber-grid scanlines relative">
+  <div class="container-vr relative z-10 text-center">
+    <p class="section-tag justify-center mb-4 hero-animate hero-animate-d1">// CURATED BUNDLES</p>
+    <h1 class="section-title text-4xl sm:text-5xl dark:text-white text-gray-900 mb-4 hero-animate hero-animate-d2">MISSION <span class="neon-magenta">COLLECTIONS</span></h1>
+    <p class="text-muted-vr max-w-lg mx-auto hero-animate hero-animate-d3 text-sm">Curated packs of VR escape missions grouped by theme. Book a collection and save — or buy as a gift bundle for someone special.</p>
+  </div>
+</section>
+
+<!-- COLLECTIONS GRID -->
+<section class="section-py page-bg">
+  <div class="container-vr">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- SCI-FI COLLECTION -->
+      <div class="cyber-card overflow-hidden reveal">
+        <div class="relative" style="height:200px;overflow:hidden;">
+          <img src="img-collection-scifi.png" alt="Sci-Fi Collection" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(0,20,40,0.4),rgba(0,20,40,0.75));"></div>
+          <div class="absolute inset-0 p-6 flex flex-col justify-end">
+            <span class="badge badge-cyan mb-2 inline-block w-fit">SCI-FI COLLECTION</span>
+            <h2 class="font-heading font-black text-2xl text-white mb-1">THE CYBER TRILOGY</h2>
+            <p class="text-xs text-gray-300 max-w-xs">Three interconnected sci-fi missions forming one epic cyber-narrative. Best played in order.</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center gap-3 p-3 dark:bg-gray-900/50 bg-gray-50 rounded">
+              <span class="badge badge-cyan text-xs">MISSION 1</span><span class="text-xs dark:text-gray-300 text-gray-700 flex-1">Cyber Heist 2.0</span><span class="text-xs font-mono text-muted-vr">★★★★☆</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 dark:bg-gray-900/50 bg-gray-50 rounded">
+              <span class="badge badge-cyan text-xs">MISSION 2</span><span class="text-xs dark:text-gray-300 text-gray-700 flex-1">Deep Signal</span><span class="text-xs font-mono text-muted-vr">★★★★☆</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 dark:bg-gray-900/50 bg-gray-50 rounded">
+              <span class="badge badge-cyan text-xs">MISSION 3</span><span class="text-xs dark:text-gray-300 text-gray-700 flex-1">Glitch City</span><span class="text-xs font-mono text-muted-vr">★★☆☆☆</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <div><span class="text-xs text-muted-vr line-through mr-2">₹2,097</span><span class="font-heading font-black text-xl neon-cyan">₹1,699</span><span class="text-xs text-muted-vr ml-1">bundle</span></div>
+            <span class="badge badge-green">SAVE ₹398</span>
+          </div>
+          <a href="signup.html" class="btn-solid-cyan w-full block text-center py-3">BOOK COLLECTION</a>
+        </div>
+      </div>
+
+      <!-- HORROR VAULT -->
+      <div class="cyber-card overflow-hidden reveal" data-delay="100">
+        <div class="relative" style="height:200px;overflow:hidden;">
+          <img src="img-collection-horror.png" alt="Horror Vault" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(26,0,34,0.4),rgba(51,0,17,0.8));"></div>
+          <div class="absolute inset-0 p-6 flex flex-col justify-end">
+            <span class="badge badge-magenta mb-2 inline-block w-fit">HORROR VAULT</span>
+            <h2 class="font-heading font-black text-2xl text-white mb-1">THE NIGHTMARE PACK</h2>
+            <p class="text-xs text-gray-300 max-w-xs">Two terror missions back to back. Only for those who dare. Parental advisory: extreme scares.</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center gap-3 p-3 dark:bg-gray-900/50 bg-gray-50 rounded">
+              <span class="badge badge-magenta text-xs">HORROR 1</span><span class="text-xs dark:text-gray-300 text-gray-700 flex-1">Haunted Mainframe</span><span class="text-xs font-mono text-muted-vr">★★★★★</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 dark:bg-gray-900/50 bg-gray-50 rounded">
+              <span class="badge badge-magenta text-xs">HORROR 2</span><span class="text-xs dark:text-gray-300 text-gray-700 flex-1">Void Station Omega</span><span class="text-xs font-mono text-green-400 text-xs">COMING SOON</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <div><span class="text-xs text-muted-vr line-through mr-2">₹1,398</span><span class="font-heading font-black text-xl neon-magenta">₹1,099</span><span class="text-xs text-muted-vr ml-1">bundle</span></div>
+            <span class="badge badge-green">SAVE ₹299</span>
+          </div>
+          <a href="signup.html" class="btn-neon-magenta w-full block text-center py-3">BOOK COLLECTION</a>
+        </div>
+      </div>
+
+      <!-- ADVENTURE PACK -->
+      <div class="cyber-card overflow-hidden reveal">
+        <div class="relative" style="height:200px;overflow:hidden;">
+          <img src="img-collection-adventure.png" alt="Adventure Pack" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(26,17,0,0.4),rgba(51,34,0,0.8));"></div>
+          <div class="absolute inset-0 p-6 flex flex-col justify-end">
+            <span class="badge badge-yellow mb-2 inline-block w-fit">ADVENTURE PACK</span>
+            <h2 class="font-heading font-black text-2xl text-white mb-1">EXPLORERS' BUNDLE</h2>
+            <p class="text-xs text-gray-300 max-w-xs">Family-friendly and beginner-suitable. Great for first-timers and groups with mixed experience levels.</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center gap-3 p-3 dark:bg-gray-900/50 bg-gray-50 rounded">
+              <span class="badge badge-yellow text-xs">ADV 1</span><span class="text-xs dark:text-gray-300 text-gray-700 flex-1">Neon Temple</span><span class="text-xs font-mono text-muted-vr">★★★☆☆</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 dark:bg-gray-900/50 bg-gray-50 rounded">
+              <span class="badge badge-yellow text-xs">ADV 2</span><span class="text-xs dark:text-gray-300 text-gray-700 flex-1">Glitch City</span><span class="text-xs font-mono text-muted-vr">★★☆☆☆</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <div><span class="text-xs text-muted-vr line-through mr-2">₹1,398</span><span class="font-heading font-black text-xl neon-yellow">₹1,099</span><span class="text-xs text-muted-vr ml-1">bundle</span></div>
+            <span class="badge badge-green">SAVE ₹299</span>
+          </div>
+          <a href="signup.html" class="btn-neon-cyan w-full block text-center py-3">BOOK COLLECTION</a>
+        </div>
+      </div>
+
+      <!-- THE ULTIMATUM -->
+      <div class="cyber-card overflow-hidden reveal" data-delay="100" style="border-color:var(--neon-yellow);box-shadow:var(--glow-yellow)">
+        <div class="relative" style="height:200px;overflow:hidden;">
+          <img src="img-collection-ultimate.png" alt="Ultimate Bundle" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(13,13,13,0.3),rgba(26,26,26,0.82));"></div>
+          <div class="absolute top-3 right-3 z-10"><span class="badge badge-yellow">BEST VALUE</span></div>
+          <div class="absolute inset-0 p-6 flex flex-col justify-end">
+            <span class="badge badge-yellow mb-2 inline-block w-fit">ULTIMATE BUNDLE</span>
+            <h2 class="font-heading font-black text-2xl text-white mb-1">THE ULTIMATUM</h2>
+            <p class="text-xs text-gray-300 max-w-xs">Every genre. Every mission. The complete NeonEscape experience.</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="space-y-2 mb-6">
+            <div class="flex items-center gap-3 p-2 dark:bg-gray-900/50 bg-gray-50 rounded"><span class="badge badge-cyan text-xs">SCI-FI</span><span class="text-xs dark:text-gray-300 text-gray-700 flex-1">Cyber Heist + Deep Signal + Glitch City</span></div>
+            <div class="flex items-center gap-3 p-2 dark:bg-gray-900/50 bg-gray-50 rounded"><span class="badge badge-magenta text-xs">HORROR</span><span class="text-xs dark:text-gray-300 text-gray-700 flex-1">Haunted Mainframe</span></div>
+            <div class="flex items-center gap-3 p-2 dark:bg-gray-900/50 bg-gray-50 rounded"><span class="badge badge-yellow text-xs">ADVENTURE</span><span class="text-xs dark:text-gray-300 text-gray-700 flex-1">Neon Temple</span></div>
+            <div class="flex items-center gap-3 p-2 dark:bg-gray-900/50 bg-gray-50 rounded"><span class="badge badge-cyan text-xs">MYSTERY</span><span class="text-xs dark:text-gray-300 text-gray-700 flex-1">Phantom Protocol</span></div>
+          </div>
+          <p class="text-xs text-muted-vr mb-3">Valid for 90 days. Use any combination of included missions at any time.</p>
+          <div class="flex items-center justify-between mb-4">
+            <div><span class="text-xs text-muted-vr line-through mr-2">₹4,194</span><span class="font-heading font-black text-xl neon-yellow">₹2,999</span><span class="text-xs text-muted-vr ml-1">bundle</span></div>
+            <span class="badge badge-green">SAVE ₹1,195</span>
+          </div>
+          <a href="signup.html" class="btn-solid-cyan w-full block text-center py-3 neon-pulse">UNLOCK THE ULTIMATUM</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GIFT BUNDLES CTA -->
+<section class="section-py section-bg-alt cyber-grid">
+  <div class="container-vr">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div class="reveal-left">
+        <p class="section-tag mb-4">GIFTING MADE EASY</p>
+        <h2 class="section-title text-3xl sm:text-4xl dark:text-white text-gray-900 mb-5">GIVE THE GIFT OF <span class="neon-magenta">ADVENTURE</span></h2>
+        <p class="text-muted-vr mb-6 text-sm leading-relaxed">Any collection can be gifted as a digital voucher. Delivered by email in seconds. They choose their session date, pick their squad, and show up ready to escape. No expiry stress — all gift bundles are valid for 12 months.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="services.html" class="btn-neon-magenta px-6 py-3">BUY GIFT VOUCHER</a>
+          <a href="contact.html" class="btn-neon-cyan px-6 py-3">CUSTOM BUNDLE?</a>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="cyber-card overflow-hidden neon-border-magenta">
+          <div class="relative" style="height:160px;overflow:hidden;">
+            <img src="img-collection-ultimate.png" alt="Digital Gift Card" class="w-full h-full object-cover"/>
+            <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(80,0,100,0.5),rgba(50,0,30,0.8));"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <div class="font-heading font-black text-lg text-white tracking-widest">DIGITAL GIFT CARD</div>
+                <div class="font-heading font-black text-3xl neon-magenta mt-1">₹500 – ₹5,000</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-muted-vr text-xs mb-6">Sent instantly by email. Redeem against any mission, collection, or add-on. Perfect for birthdays, festivals, and last-minute gifts.</p>
+            <a href="services.html" class="btn-neon-magenta w-full block text-center py-3">GET A GIFT CARD</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEASONAL COLLECTIONS TEASER -->
+<section class="section-py page-bg">
+  <div class="container-vr">
+    <div class="text-center mb-10 reveal">
+      <p class="section-tag justify-center mb-3">COMING SOON</p>
+      <h2 class="section-title text-2xl sm:text-3xl dark:text-white text-gray-900 mb-4">SEASONAL COLLECTIONS</h2>
+      <p class="text-muted-vr max-w-md mx-auto text-sm">Limited-time collections around festivals, holidays, and special events. Sign up to be notified first.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <div class="cyber-card overflow-hidden reveal opacity-70">
+        <div class="relative" style="height:120px;overflow:hidden;">
+          <img src="img-collection-horror.png" alt="Halloween Terror Pack" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(80,20,0,0.6),rgba(60,10,0,0.85));"></div>
+          <div class="absolute inset-0 flex items-center justify-center"><div class="font-heading font-black text-sm text-white text-center px-2">HALLOWEEN TERROR PACK</div></div>
+        </div>
+        <div class="p-4">
+          <p class="text-xs text-muted-vr mb-3">October 2025. Special horror-themed missions unlocked for one month only.</p>
+          <span class="badge badge-orange">COMING OCT 2025</span>
+        </div>
+      </div>
+      <div class="cyber-card overflow-hidden reveal opacity-70" data-delay="100">
+        <div class="relative" style="height:120px;overflow:hidden;">
+          <img src="img-room-adventure.png" alt="Diwali Glitch Festival" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(80,60,0,0.6),rgba(60,40,0,0.85));"></div>
+          <div class="absolute inset-0 flex items-center justify-center"><div class="font-heading font-black text-sm text-white text-center px-2">DIWALI GLITCH FESTIVAL</div></div>
+        </div>
+        <div class="p-4">
+          <p class="text-xs text-muted-vr mb-3">November 2025. A neon-lit Diwali city in VR. Fireworks, puzzles, and celebration.</p>
+          <span class="badge badge-yellow">COMING NOV 2025</span>
+        </div>
+      </div>
+      <div class="cyber-card overflow-hidden reveal opacity-70" data-delay="200">
+        <div class="relative" style="height:120px;overflow:hidden;">
+          <img src="img-collection-scifi.png" alt="Winter Cyber Gauntlet" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(0,20,60,0.6),rgba(0,10,40,0.85));"></div>
+          <div class="absolute inset-0 flex items-center justify-center"><div class="font-heading font-black text-sm text-white text-center px-2">WINTER CYBER GAUNTLET</div></div>
+        </div>
+        <div class="p-4">
+          <p class="text-xs text-muted-vr mb-3">December 2025. Three back-to-back speed missions in a snowy cyberpunk world.</p>
+          <span class="badge badge-cyan">COMING DEC 2025</span>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-10 reveal">
+      <a href="signup.html" class="btn-neon-cyan px-8 py-4">SIGN UP FOR EARLY ACCESS</a>
+    </div>
+  </div>
+</section>
+
+<footer class="py-12 border-t dark:border-cyan-900/30 border-blue-100">
+  <div class="container-vr"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10"><div><div class="flex items-center gap-2 mb-4"><div class="w-7 h-7 relative flex-shrink-0"><div class="absolute inset-0 border-2 border-cyan-400 rotate-45"></div><div class="absolute inset-2 bg-cyan-400 rotate-45"></div></div><span class="font-heading font-black text-base tracking-widest neon-cyan">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span></div><p class="text-muted-vr text-xs leading-relaxed">Rourkela's premier VR escape room arena. Wireless. Immersive. Unforgettable.</p></div><div><h4 class="cyber-label mb-4">QUICK LINKS</h4><div class="flex flex-col gap-2"><a href="rooms.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">The Rooms</a><a href="services.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">Pricing</a><a href="leaderboards.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">Leaderboards</a><a href="contact.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">Contact</a></div></div><div><h4 class="cyber-label mb-4">FIND US</h4><p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed mb-2">📍 Cyber Hub, Sector 4<br/>Rourkela, Odisha 769001</p><p class="text-xs dark:text-gray-400 text-gray-500">📞 +91 98765 43210</p></div><div><h4 class="cyber-label mb-4">ARENA HOURS</h4><div class="flex flex-col gap-1.5"><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Mon – Thu</span><span class="font-mono neon-cyan">12:00–22:00</span></div><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Fri – Sat</span><span class="font-mono neon-cyan">11:00–00:00</span></div><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Sunday</span><span class="font-mono neon-cyan">11:00–22:00</span></div></div></div></div><div class="cyber-hr mb-6"></div><p class="text-xs dark:text-gray-600 text-gray-400 font-mono text-center">© 2025 NEONESCAPE VR. ALL RIGHTS RESERVED.</p></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
