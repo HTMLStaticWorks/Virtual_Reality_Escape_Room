@@ -6,13 +6,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
 
 /* ── CSS Custom Properties ── */
+/* ─────────────────────────────────────────────
+   4-COLOUR PALETTE
+   1. Neon Cyan    #00f5ff  (primary accent)
+   2. Neon Magenta #ff00ff  (secondary accent)
+   3. Neon Yellow  #ffe600  (tertiary / stars)
+   4. Deep Space   #0a0a1a  (base background)
+   ───────────────────────────────────────────── */
 :root {
+  /* ── Brand Palette (4 colours only) ── */
   --neon-cyan: #00f5ff;
   --neon-magenta: #ff00ff;
   --neon-yellow: #ffe600;
-  --neon-green: #39ff14;
-  --neon-orange: #ff6600;
+  /* Colour 4 is the dark background: --dark-bg */
 
+  /* ── Dark Mode Surfaces ── */
   --dark-bg: #0a0a1a;
   --dark-bg2: #0d0d20;
   --dark-card: #111128;
@@ -21,6 +29,7 @@
   --dark-text: #e0e0ff;
   --dark-text-muted: rgba(224, 224, 255, 0.6);
 
+  /* ── Light Mode Surfaces ── */
   --light-bg: #f0f4ff;
   --light-bg2: #e8edff;
   --light-card: #ffffff;
@@ -29,10 +38,12 @@
   --light-text: #1a1a3a;
   --light-text-muted: rgba(26, 26, 58, 0.6);
 
+  /* ── Typography ── */
   --font-heading: 'Orbitron', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'Share Tech Mono', monospace;
 
+  /* ── Glow Shadows ── */
   --glow-cyan: 0 0 10px rgba(0, 245, 255, 0.5), 0 0 30px rgba(0, 245, 255, 0.3), 0 0 60px rgba(0, 245, 255, 0.1);
   --glow-magenta: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.3), 0 0 60px rgba(255, 0, 255, 0.1);
   --glow-yellow: 0 0 10px rgba(255, 230, 0, 0.5), 0 0 30px rgba(255, 230, 0, 0.3);
@@ -402,11 +413,13 @@ html:not(.dark) .nav-link:hover, html:not(.dark) .nav-link.active { color: #0060
   padding: 0.15rem 0.6rem;
   border-radius: 2px;
 }
-.badge-cyan { background: rgba(0, 245, 255, 0.15); color: var(--neon-cyan); border: 1px solid rgba(0, 245, 255, 0.3); }
+/* Badges — using 4 palette colours only */
+.badge-cyan    { background: rgba(0, 245, 255, 0.15); color: var(--neon-cyan);    border: 1px solid rgba(0, 245, 255, 0.3); }
 .badge-magenta { background: rgba(255, 0, 255, 0.15); color: var(--neon-magenta); border: 1px solid rgba(255, 0, 255, 0.3); }
-.badge-yellow { background: rgba(255, 230, 0, 0.15); color: var(--neon-yellow); border: 1px solid rgba(255, 230, 0, 0.3); }
-.badge-green { background: rgba(57, 255, 20, 0.15); color: var(--neon-green); border: 1px solid rgba(57, 255, 20, 0.3); }
-.badge-orange { background: rgba(255, 102, 0, 0.15); color: var(--neon-orange); border: 1px solid rgba(255, 102, 0, 0.3); }
+.badge-yellow  { background: rgba(255, 230, 0, 0.15); color: #c4a800;            border: 1px solid rgba(255, 230, 0, 0.3); }
+/* Remapped: green → cyan, orange → magenta */
+.badge-green   { background: rgba(0, 245, 255, 0.15); color: var(--neon-cyan);    border: 1px solid rgba(0, 245, 255, 0.3); }
+.badge-orange  { background: rgba(255, 0, 255, 0.15); color: var(--neon-magenta); border: 1px solid rgba(255, 0, 255, 0.3); }
 
 /* ── Difficulty Stars ── */
 .star { color: rgba(255, 230, 0, 0.3); }
@@ -707,7 +720,7 @@ html:not(.dark) footer { background-color: #e0e8ff; }
 /* ── Waiver Status ── */
 .waiver-ok {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  color: var(--neon-green);
+  color: var(--neon-cyan); /* remapped from green → cyan */
   font-family: var(--font-mono);
   font-size: 0.85rem;
 }
@@ -803,7 +816,7 @@ html:not(.dark) .btn-social {
 .live-dot {
   width: 8px; height: 8px;
   border-radius: 50%;
-  background: #ff3333;
+  background: var(--neon-magenta); /* remapped from red → magenta */
   display: inline-block;
   animation: live-pulse 1s ease-in-out infinite;
 }
@@ -824,6 +837,7 @@ html:not(.dark) .map-placeholder { background: var(--light-card2); border-color:
   100% { background-position: 200% center; }
 }
 .holographic {
+  /* Holographic shimmer uses all 3 accent colours */
   background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta), var(--neon-yellow), var(--neon-cyan));
   background-size: 200% auto;
   -webkit-background-clip: text;

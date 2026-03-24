@@ -282,7 +282,7 @@
     document.querySelectorAll('.lb-row').forEach((row, i) => {
       if (i === 0) row.style.color = 'var(--neon-yellow)';
       else if (i === 1) row.style.color = 'rgba(192,192,220,0.9)';
-      else if (i === 2) row.style.color = 'var(--neon-orange)';
+      else if (i === 2) row.style.color = 'var(--neon-magenta)'; // remapped from orange → magenta
     });
   }
 
@@ -295,10 +295,8 @@
         form.querySelectorAll('[required]').forEach(field => {
           if (!field.value.trim()) {
             valid = false;
-            field.classList.add('border-red-500');
-            field.style.borderColor = '#ff3333';
+            field.style.borderColor = 'var(--neon-magenta)'; // error = magenta (in palette)
           } else {
-            field.classList.remove('border-red-500');
             field.style.borderColor = '';
           }
         });
@@ -306,7 +304,7 @@
           const btn = form.querySelector('[type="submit"]');
           if (btn) {
             btn.textContent = '✓ SENT!';
-            btn.style.background = 'var(--neon-green)';
+            btn.style.background = 'var(--neon-cyan)'; // success = cyan (in palette)
             btn.style.color = '#000';
             btn.style.border = 'none';
             setTimeout(() => { btn.textContent = 'SUBMIT'; btn.style = ''; }, 3000);
