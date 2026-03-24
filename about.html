@@ -13,35 +13,35 @@
 <body class="page-bg min-h-screen">
 <nav id="main-nav" class="nav-glass fixed top-0 left-0 right-0 z-50 transition-all duration-300">
   <div class="container-vr"><div class="flex items-center justify-between h-16">
-    <a href="index.html" class="flex items-center gap-2 flex-shrink-0">
-      <div class="w-8 h-8 relative"><div class="absolute inset-0 border-2 border-cyan-400 rotate-45 neon-pulse"></div><div class="absolute inset-2 bg-cyan-400 rotate-45"></div></div>
-      <span class="font-heading font-black text-lg tracking-widest neon-cyan hidden sm:block">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span>
+    <a href="index.html" class="flex items-center gap-2 flex-shrink-0 mr-6">
+      <div class="w-8 h-8 relative"><div class="absolute inset-0 border-2 border-green-400 rotate-45 neon-pulse"></div><div class="absolute inset-2 bg-green-400 rotate-45"></div></div>
+      <span class="font-heading font-black text-lg tracking-widest neon-green hidden sm:block">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span>
     </a>
-    <div class="hidden xl:flex items-center gap-5">
-      <div class="relative group"><button class="nav-link flex items-center gap-1">HOME <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></button><div class="absolute top-full left-0 mt-1 w-32 dark:bg-gray-950 bg-white border dark:border-cyan-900/50 border-blue-100 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1"><a href="index.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-cyan-400 hover:bg-cyan-400/5 transition-colors">HOME</a><a href="home-2.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-cyan-400 hover:bg-cyan-400/5 transition-colors">HOME 2</a></div></div><a href="services.html" class="nav-link">Services</a><a href="rooms.html" class="nav-link">The Rooms</a><a href="collections.html" class="nav-link">Collections</a><a href="leaderboards.html" class="nav-link">Leaderboards</a><a href="about.html" class="nav-link active">About</a><a href="contact.html" class="nav-link">Contact</a><a href="dashboard.html" class="nav-link">Dashboard</a><a href="signup.html" class="nav-link">Signup</a>
-      <button id="theme-toggle" class="ml-2 dark:text-gray-300 text-gray-600 hover:text-cyan-400 transition-colors" aria-label="Toggle theme"></button>
-      <a href="rooms.html" class="btn-solid-cyan text-xs">BOOK NOW</a>
+    <div class="hidden xl:flex items-center gap-8">
+      <div class="relative group"><button class="nav-link flex items-center gap-1">HOME <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></button><div class="absolute top-full left-0 mt-1 w-32 dark:bg-gray-950 bg-white border dark:border-green-900/50 border-gray-100 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1"><a href="index.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-green-400 hover:bg-green-400/5 transition-colors">HOME</a><a href="home-2.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-green-400 hover:bg-green-400/5 transition-colors">HOME 2</a></div></div><a href="services.html" class="nav-link">Services</a><a href="rooms.html" class="nav-link">The Rooms</a><a href="collections.html" class="nav-link">Collections</a><a href="leaderboards.html" class="nav-link">Leaderboards</a><a href="about.html" class="nav-link active">About</a><a href="contact.html" class="nav-link">Contact</a><a href="dashboard.html" class="nav-link">Dashboard</a><a href="signup.html" class="nav-link">Signup</a>
+      <button id="theme-toggle" class="ml-2 dark:text-gray-300 text-gray-600 hover:text-green-400 transition-colors" aria-label="Toggle theme"></button>
+      <a href="rooms.html" class="btn-solid-green text-xs nav-btn">BOOK NOW</a>
     </div>
     <div class="flex xl:hidden items-center gap-3">
-      <button id="theme-toggle-mobile" class="dark:text-gray-300 text-gray-600 hover:text-cyan-400 transition-colors" aria-label="Toggle theme"></button>
+      <button id="theme-toggle-mobile" class="dark:text-gray-300 text-gray-600 hover:text-green-400 transition-colors" aria-label="Toggle theme"></button>
       <button id="hamburger" class="dark:text-gray-300 text-gray-700 p-2" aria-label="Open menu" aria-expanded="false"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </div>
   </div></div>
 </nav>
 <div id="mobile-overlay" class="hidden fixed inset-0 bg-black/60 z-40 backdrop-blur-sm"></div>
-<aside id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-72 z-50 dark:bg-gray-950 bg-white border-r dark:border-cyan-900/50 border-blue-200 flex flex-col">
-  <div class="flex items-center justify-between p-5 border-b dark:border-cyan-900/50 border-blue-100"><span class="font-heading font-black text-base tracking-widest neon-cyan">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span><button id="mobile-close" class="dark:text-gray-400 text-gray-600 hover:text-cyan-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
+<aside id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-72 z-50 dark:bg-gray-950 bg-white border-r dark:border-green-900/50 border-gray-200 flex flex-col">
+  <div class="flex items-center justify-between p-5 border-b dark:border-green-900/50 border-gray-100"><span class="font-heading font-black text-base tracking-widest neon-green">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span><button id="mobile-close" class="dark:text-gray-400 text-gray-600 hover:text-green-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
   <nav class="flex flex-col p-5 gap-1 flex-1 overflow-y-auto">
     <div class="border-b dark:border-gray-800 border-gray-100"><p class="text-xs font-mono tracking-widest dark:text-gray-500 text-gray-400 pt-2.5 pb-1">HOME</p><a href="index.html" class="nav-link py-2 pl-4 block text-xs border-b dark:border-gray-800 border-gray-100">↳ Home</a><a href="home-2.html" class="nav-link py-2 pl-4 block text-xs">↳ Home 2</a></div><a href="services.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Services</a><a href="rooms.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">The Rooms</a><a href="collections.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Collections</a><a href="leaderboards.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Leaderboards</a><a href="about.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">About</a><a href="contact.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Contact</a><a href="dashboard.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Dashboard</a><a href="signup.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Signup</a>
   </nav>
-  <div class="p-5 border-t dark:border-cyan-900/50 border-blue-100"><a href="rooms.html" class="btn-solid-cyan w-full block text-center">BOOK NOW</a></div>
+  <div class="p-5 border-t dark:border-green-900/50 border-gray-100"><a href="rooms.html" class="btn-solid-green w-full block text-center">BOOK NOW</a></div>
 </aside>
 
 <!-- PAGE HEADER -->
 <section class="pt-32 pb-16 page-bg cyber-grid scanlines relative">
   <div class="container-vr relative z-10 text-center">
     <p class="section-tag justify-center mb-4 hero-animate hero-animate-d1">// THE MAINFRAME</p>
-    <h1 class="section-title text-4xl sm:text-5xl lg:text-6xl dark:text-white text-gray-900 mb-6 hero-animate hero-animate-d2">ABOUT <span class="neon-cyan">US</span></h1>
+    <h1 class="section-title text-4xl sm:text-5xl lg:text-6xl dark:text-white text-gray-900 mb-6 hero-animate hero-animate-d2">ABOUT <span class="neon-green">US</span></h1>
     <p class="text-muted-vr max-w-xl mx-auto text-base hero-animate hero-animate-d3">The story behind Rourkela's most electrifying VR arena — the people, the tech, and the obsession with immersion.</p>
   </div>
 </section>
@@ -66,7 +66,7 @@
         </div>
         <div class="cyber-card p-5 mt-4">
           <div class="flex items-start gap-3">
-            <div class="w-2 h-2 rounded-full bg-cyan-400 mt-1.5 flex-shrink-0"></div>
+            <div class="w-2 h-2 rounded-full bg-green-400 mt-1.5 flex-shrink-0"></div>
             <p class="text-muted-vr text-xs italic">"VR escape rooms have one massive advantage over physical ones: if you want a haunted castle, a space station, or the ocean floor, you just load the file. Infinite worlds, zero resets." — <span class="dark:text-white text-gray-800">Karthik Nair, Co-Founder</span></p>
           </div>
         </div>
@@ -85,11 +85,11 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <div class="cyber-card p-6 text-center reveal">
-        <div class="w-20 h-20 mx-auto rounded-full overflow-hidden border-2 border-cyan-400 mb-4">
+        <div class="w-20 h-20 mx-auto rounded-full overflow-hidden border-2 border-green-400 mb-4">
           <img src="img-team-karthik.png" alt="Karthik Nair" class="w-full h-full object-cover"/>
         </div>
         <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-1">KARTHIK NAIR</h3>
-        <div class="badge badge-cyan mb-3">LEAD GAME MASTER</div>
+        <div class="badge badge-green mb-3">LEAD GAME MASTER</div>
         <p class="text-muted-vr text-xs">Co-founder and head of gameplay design. Former competitive gamer. Known for his cryptic hints and evil laugh.</p>
       </div>
       <div class="cyber-card p-6 text-center reveal" data-delay="100">
@@ -109,8 +109,8 @@
         <p class="text-muted-vr text-xs">Keeps the headsets calibrated and the haptics firing. If something glitches, Arjun fixes it before you notice.</p>
       </div>
       <div class="cyber-card p-6 text-center reveal" data-delay="300">
-        <div class="w-20 h-20 mx-auto rounded-full bg-cyan-400/20 border-2 border-cyan-400 flex items-center justify-center mb-4">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--neon-cyan)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        <div class="w-20 h-20 mx-auto rounded-full bg-green-400/20 border-2 border-green-400 flex items-center justify-center mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--neon-green)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
         </div>
         <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-1">SNEHA ROY</h3>
         <div class="badge badge-green mb-3">EXPERIENCE HOST</div>
@@ -131,10 +131,10 @@
         <p class="text-muted-vr mb-4 text-sm leading-relaxed">Everything about NeonEscape is intentionally retro-futuristic. The neon signs, the VHS-grain textures on the lobby screens, the Orbitron font on every surface — it's all a love letter to 90s sci-fi and arcade culture.</p>
         <p class="text-muted-vr mb-4 text-sm leading-relaxed">We drew deep inspiration from Tron, Johnny Mnemonic, and the neon-drenched arcades of the early 90s. The design philosophy: you should feel like you stepped into a cyberpunk film even before the headset goes on.</p>
         <div class="flex flex-wrap gap-2 mt-4">
-          <span class="badge badge-cyan">NEON AESTHETICS</span>
+          <span class="badge badge-green">NEON AESTHETICS</span>
           <span class="badge badge-magenta">90s CYBERPUNK</span>
           <span class="badge badge-yellow">RETRO ARCADE</span>
-          <span class="badge badge-cyan">VHS GRAIN</span>
+          <span class="badge badge-green">VHS GRAIN</span>
           <span class="badge badge-green">HAPTIC FEEDBACK</span>
         </div>
       </div>
@@ -144,7 +144,7 @@
         <h2 class="section-title text-2xl sm:text-3xl dark:text-white text-gray-900 mb-5">VR vs PHYSICAL ROOMS</h2>
         <div class="space-y-4">
           <div class="cyber-card p-4 flex gap-3">
-            <div class="w-8 h-8 rounded-full bg-cyan-400/20 border border-cyan-400/30 flex items-center justify-center text-sm flex-shrink-0">∞</div>
+            <div class="w-8 h-8 rounded-full bg-green-400/20 border border-green-400/30 flex items-center justify-center text-sm flex-shrink-0">∞</div>
             <div><div class="text-xs font-heading dark:text-white text-gray-800 mb-1">INFINITE WORLDS</div><p class="text-xs text-muted-vr">No physical resets. A new chapter can be live the same day we finish coding it.</p></div>
           </div>
           <div class="cyber-card p-4 flex gap-3">
@@ -156,7 +156,7 @@
             <div><div class="text-xs font-heading dark:text-white text-gray-800 mb-1">REAL-TIME ANALYTICS</div><p class="text-xs text-muted-vr">We track every decision, puzzle solve time, and hint usage. Your stats are science.</p></div>
           </div>
           <div class="cyber-card p-4 flex gap-3">
-            <div class="w-8 h-8 rounded-full bg-cyan-400/20 border border-cyan-400/30 flex items-center justify-center text-sm flex-shrink-0">🌍</div>
+            <div class="w-8 h-8 rounded-full bg-green-400/20 border border-green-400/30 flex items-center justify-center text-sm flex-shrink-0">🌍</div>
             <div><div class="text-xs font-heading dark:text-white text-gray-800 mb-1">LIMITLESS ENVIRONMENTS</div><p class="text-xs text-muted-vr">Deep ocean. Outer space. 1999. 3069. We can go anywhere. Physical rooms can't say that.</p></div>
           </div>
         </div>
@@ -175,22 +175,22 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="cyber-card p-6 reveal">
-        <div class="w-12 h-12 rounded flex items-center justify-center mb-4 border dark:border-cyan-900/60 border-blue-200 bg-cyan-400/10">
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:var(--neon-cyan)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        <div class="w-12 h-12 rounded flex items-center justify-center mb-4 border dark:border-green-900/60 border-gray-200 bg-green-400/10">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:var(--neon-green)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
         </div>
         <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-2">UV HEADSET SANITATION</h3>
         <p class="text-muted-vr text-xs">Every headset is sanitized with medical-grade UV-C light and antimicrobial wipes between each session. Hygiene logs are kept.</p>
       </div>
       <div class="cyber-card p-6 reveal" data-delay="100">
-        <div class="w-12 h-12 rounded flex items-center justify-center mb-4 border dark:border-cyan-900/60 border-blue-200 bg-cyan-400/10">
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:var(--neon-cyan)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <div class="w-12 h-12 rounded flex items-center justify-center mb-4 border dark:border-green-900/60 border-gray-200 bg-green-400/10">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:var(--neon-green)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
         <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-2">PADDED PLAY ZONES</h3>
         <p class="text-muted-vr text-xs">Every play area has foam-padded walls, soft floor tiles, and a clear 2.5m x 2.5m safe zone per player. No sharp edges.</p>
       </div>
       <div class="cyber-card p-6 reveal" data-delay="200">
-        <div class="w-12 h-12 rounded flex items-center justify-center mb-4 border dark:border-cyan-900/60 border-blue-200 bg-cyan-400/10">
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:var(--neon-cyan)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+        <div class="w-12 h-12 rounded flex items-center justify-center mb-4 border dark:border-green-900/60 border-gray-200 bg-green-400/10">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:var(--neon-green)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
         </div>
         <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-2">DIGITAL WAIVER</h3>
         <p class="text-muted-vr text-xs">All players complete a digital liability waiver before their session. Parents must countersign for players under 16.</p>
@@ -230,14 +230,18 @@
     <p class="text-muted-vr mb-8 max-w-md mx-auto text-sm">Love tech, love games, love making people's jaws drop? We're looking for tech-savvy, energetic game facilitators. Part-time &amp; full-time available.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="contact.html" class="btn-neon-magenta px-8 py-4">APPLY NOW</a>
-      <a href="contact.html" class="btn-neon-cyan px-8 py-4">VIEW OPENINGS</a>
+      <a href="contact.html" class="btn-neon-green px-8 py-4">VIEW OPENINGS</a>
     </div>
   </div>
 </section>
 
-<footer class="py-12 border-t dark:border-cyan-900/30 border-blue-100">
-  <div class="container-vr"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10"><div><div class="flex items-center gap-2 mb-4"><div class="w-7 h-7 relative flex-shrink-0"><div class="absolute inset-0 border-2 border-cyan-400 rotate-45"></div><div class="absolute inset-2 bg-cyan-400 rotate-45"></div></div><span class="font-heading font-black text-base tracking-widest neon-cyan">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span></div><p class="text-muted-vr text-xs leading-relaxed">Rourkela's premier VR escape room arena.</p></div><div><h4 class="cyber-label mb-4">QUICK LINKS</h4><div class="flex flex-col gap-2"><a href="rooms.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">The Rooms</a><a href="services.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">Pricing</a><a href="leaderboards.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">Leaderboards</a><a href="contact.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">Contact</a></div></div><div><h4 class="cyber-label mb-4">FIND US</h4><p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed mb-2">📍 Cyber Hub, Sector 4<br/>Rourkela, Odisha 769001</p><p class="text-xs dark:text-gray-400 text-gray-500">📞 +91 98765 43210</p></div><div><h4 class="cyber-label mb-4">ARENA HOURS</h4><div class="flex flex-col gap-1.5"><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Mon – Thu</span><span class="font-mono neon-cyan">12:00–22:00</span></div><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Fri – Sat</span><span class="font-mono neon-cyan">11:00–00:00</span></div><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Sunday</span><span class="font-mono neon-cyan">11:00–22:00</span></div></div></div></div><div class="cyber-hr mb-6"></div><p class="text-xs dark:text-gray-600 text-gray-400 font-mono text-center">© 2025 NEONESCAPE VR. ALL RIGHTS RESERVED.</p></div>
+<footer class="py-12 border-t dark:border-green-900/30 border-gray-100">
+  <div class="container-vr"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10"><div><div class="flex items-center gap-2 mb-4"><div class="w-7 h-7 relative flex-shrink-0"><div class="absolute inset-0 border-2 border-green-400 rotate-45"></div><div class="absolute inset-2 bg-green-400 rotate-45"></div></div><span class="font-heading font-black text-base tracking-widest neon-green">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span></div><p class="text-muted-vr text-xs leading-relaxed">Rourkela's premier VR escape room arena.</p></div><div><h4 class="cyber-label mb-4">QUICK LINKS</h4><div class="flex flex-col gap-2"><a href="rooms.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">The Rooms</a><a href="services.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">Pricing</a><a href="leaderboards.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">Leaderboards</a><a href="contact.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">Contact</a></div></div><div><h4 class="cyber-label mb-4">FIND US</h4><p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed mb-2">📍 Cyber Hub, Sector 4<br/>Rourkela, Odisha 769001</p><p class="text-xs dark:text-gray-400 text-gray-500">📞 +91 98765 43210</p></div><div><h4 class="cyber-label mb-4">ARENA HOURS</h4><div class="flex flex-col gap-1.5"><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Mon – Thu</span><span class="font-mono neon-green">12:00–22:00</span></div><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Fri – Sat</span><span class="font-mono neon-green">11:00–00:00</span></div><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Sunday</span><span class="font-mono neon-green">11:00–22:00</span></div></div></div></div><div class="cyber-hr mb-6"></div><p class="text-xs dark:text-gray-600 text-gray-400 font-mono text-center">© 2026 NEONESCAPE VR. ALL RIGHTS RESERVED.</p></div>
 </footer>
 <script src="main.js"></script>
 </body>
 </html>
+
+
+
+

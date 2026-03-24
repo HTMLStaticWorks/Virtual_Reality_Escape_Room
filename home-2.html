@@ -14,26 +14,26 @@
 <body class="page-bg min-h-screen">
 <nav id="main-nav" class="nav-glass fixed top-0 left-0 right-0 z-50 transition-all duration-300">
   <div class="container-vr"><div class="flex items-center justify-between h-16">
-    <a href="index.html" class="flex items-center gap-2 flex-shrink-0">
-      <div class="w-8 h-8 relative"><div class="absolute inset-0 border-2 border-cyan-400 rotate-45 neon-pulse"></div><div class="absolute inset-2 bg-cyan-400 rotate-45"></div></div>
-      <span class="font-heading font-black text-lg tracking-widest neon-cyan hidden sm:block">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span>
+    <a href="index.html" class="flex items-center gap-2 flex-shrink-0 mr-6">
+      <div class="w-8 h-8 relative"><div class="absolute inset-0 border-2 border-green-400 rotate-45 neon-pulse"></div><div class="absolute inset-2 bg-green-400 rotate-45"></div></div>
+      <span class="font-heading font-black text-lg tracking-widest neon-green hidden sm:block">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span>
     </a>
-    <div class="hidden xl:flex items-center gap-5">
-      <div class="relative group"><button class="nav-link active flex items-center gap-1">HOME <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></button><div class="absolute top-full left-0 mt-1 w-32 dark:bg-gray-950 bg-white border dark:border-cyan-900/50 border-blue-100 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1"><a href="index.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-cyan-400 hover:bg-cyan-400/5 transition-colors">HOME</a><a href="home-2.html" class="block px-4 py-2 text-xs font-mono tracking-wider neon-cyan">HOME 2</a></div></div><a href="services.html" class="nav-link">Services</a><a href="rooms.html" class="nav-link">The Rooms</a><a href="collections.html" class="nav-link">Collections</a><a href="leaderboards.html" class="nav-link">Leaderboards</a><a href="about.html" class="nav-link">About</a><a href="contact.html" class="nav-link">Contact</a><a href="dashboard.html" class="nav-link">Dashboard</a><a href="signup.html" class="nav-link">Signup</a>
-      <button id="theme-toggle" class="ml-2 dark:text-gray-300 text-gray-600 hover:text-cyan-400 transition-colors" aria-label="Toggle theme"></button>
-      <a href="#group-booking" class="btn-solid-cyan text-xs">GROUP BOOK</a>
+    <div class="hidden xl:flex items-center gap-8">
+      <div class="relative group"><button class="nav-link active flex items-center gap-1">HOME <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></button><div class="absolute top-full left-0 mt-1 w-32 dark:bg-gray-950 bg-white border dark:border-green-900/50 border-gray-100 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1"><a href="index.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-green-400 hover:bg-green-400/5 transition-colors">HOME</a><a href="home-2.html" class="block px-4 py-2 text-xs font-mono tracking-wider neon-green">HOME 2</a></div></div><a href="services.html" class="nav-link">Services</a><a href="rooms.html" class="nav-link">The Rooms</a><a href="collections.html" class="nav-link">Collections</a><a href="leaderboards.html" class="nav-link">Leaderboards</a><a href="about.html" class="nav-link">About</a><a href="contact.html" class="nav-link">Contact</a><a href="dashboard.html" class="nav-link">Dashboard</a><a href="signup.html" class="nav-link">Signup</a>
+      <button id="theme-toggle" class="ml-2 dark:text-gray-300 text-gray-600 hover:text-green-400 transition-colors" aria-label="Toggle theme"></button>
+      <a href="#group-booking" class="btn-solid-green text-xs">GROUP BOOK</a>
     </div>
     <div class="flex xl:hidden items-center gap-3">
-      <button id="theme-toggle-mobile" class="dark:text-gray-300 text-gray-600 hover:text-cyan-400 transition-colors" aria-label="Toggle theme"></button>
+      <button id="theme-toggle-mobile" class="dark:text-gray-300 text-gray-600 hover:text-green-400 transition-colors" aria-label="Toggle theme"></button>
       <button id="hamburger" class="dark:text-gray-300 text-gray-700 p-2" aria-label="Open menu" aria-expanded="false"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </div>
   </div></div>
 </nav>
 <div id="mobile-overlay" class="hidden fixed inset-0 bg-black/60 z-40 backdrop-blur-sm"></div>
-<aside id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-72 z-50 dark:bg-gray-950 bg-white border-r dark:border-cyan-900/50 border-blue-200 flex flex-col">
-  <div class="flex items-center justify-between p-5 border-b dark:border-cyan-900/50 border-blue-100">
-    <span class="font-heading font-black text-base tracking-widest neon-cyan">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span>
-    <button id="mobile-close" class="dark:text-gray-400 text-gray-600 hover:text-cyan-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+<aside id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-72 z-50 dark:bg-gray-950 bg-white border-r dark:border-green-900/50 border-gray-200 flex flex-col">
+  <div class="flex items-center justify-between p-5 border-b dark:border-green-900/50 border-gray-100">
+    <span class="font-heading font-black text-base tracking-widest neon-green">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span>
+    <button id="mobile-close" class="dark:text-gray-400 text-gray-600 hover:text-green-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
   </div>
   <nav class="flex flex-col p-5 gap-1 flex-1 overflow-y-auto">
     <div class="border-b dark:border-gray-800 border-gray-100"><p class="text-xs font-mono tracking-widest dark:text-gray-500 text-gray-400 pt-2.5 pb-1">HOME</p><a href="index.html" class="nav-link py-2 pl-4 block text-xs border-b dark:border-gray-800 border-gray-100">↳ Home</a><a href="home-2.html" class="nav-link py-2 pl-4 block text-xs">↳ Home 2</a></div>
@@ -46,7 +46,7 @@
     <a href="dashboard.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Dashboard</a>
     <a href="signup.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Signup</a>
   </nav>
-  <div class="p-5 border-t dark:border-cyan-900/50 border-blue-100"><a href="#group-booking" class="btn-solid-cyan w-full block text-center">GROUP BOOK</a></div>
+  <div class="p-5 border-t dark:border-green-900/50 border-gray-100"><a href="#group-booking" class="btn-solid-green w-full block text-center">GROUP BOOK</a></div>
 </aside>
 
 <!-- HERO -->
@@ -59,7 +59,7 @@
       <h1 class="section-title text-4xl sm:text-5xl lg:text-6xl dark:text-white text-gray-900 mb-6 hero-animate hero-animate-d2">TEAM BUILDING<br/><span class="neon-magenta">LIKE NEVER</span><br/>BEFORE</h1>
       <p class="dark:text-gray-300 text-gray-700 max-w-lg text-base mb-8 hero-animate hero-animate-d3">Birthday parties, corporate adventures, anniversary celebrations. Groups of 6 to 60 welcome. We handle the tech — you make the memories.</p>
       <div class="flex flex-col sm:flex-row gap-4 hero-animate hero-animate-d4">
-        <a href="#group-booking" class="btn-solid-cyan px-8 py-4">🎉 PLAN YOUR EVENT</a>
+        <a href="#group-booking" class="btn-solid-green px-8 py-4">🎉 PLAN YOUR EVENT</a>
         <a href="services.html" class="btn-neon-magenta px-8 py-4">VIEW PACKAGES</a>
       </div>
       <div class="mt-10 flex flex-wrap gap-6">
@@ -85,42 +85,42 @@
         <span class="badge badge-magenta mb-3 inline-block">BIRTHDAY PARTY</span>
         <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">BIRTHDAY BLAST</h3>
         <ul class="text-muted-vr text-xs space-y-2 mb-6">
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>Up to 20 players</li>
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>2 VR missions of choice</li>
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>VIP lounge access (2 hrs)</li>
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>Neon birthday banner &amp; decor</li>
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>Private stats leaderboard</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>Up to 20 players</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>2 VR missions of choice</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>VIP lounge access (2 hrs)</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>Neon birthday banner &amp; decor</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>Private stats leaderboard</li>
         </ul>
         <div class="mb-4"><span class="font-heading font-black text-2xl neon-magenta">₹12,999</span><span class="text-muted-vr text-xs ml-2">for group</span></div>
         <a href="#group-booking" class="btn-neon-magenta w-full block text-center">BOOK THIS</a>
       </div>
       <div class="cyber-card neon-border-cyan p-6 reveal price-card featured" data-delay="100">
         <div class="text-3xl mb-4">🏢</div>
-        <span class="badge badge-cyan mb-3 inline-block">CORPORATE</span>
+        <span class="badge badge-green mb-3 inline-block">CORPORATE</span>
         <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">TEAM SYNAPSE</h3>
         <ul class="text-muted-vr text-xs space-y-2 mb-6">
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>Up to 40 players</li>
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>3 mission rotations</li>
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>Full arena buyout option</li>
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>Post-event analytics report</li>
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>GST invoice provided</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>Up to 40 players</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>3 mission rotations</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>Full arena buyout option</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>Post-event analytics report</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>GST invoice provided</li>
         </ul>
-        <div class="mb-4"><span class="font-heading font-black text-2xl neon-cyan">₹24,999</span><span class="text-muted-vr text-xs ml-2">for group</span></div>
-        <a href="#group-booking" class="btn-solid-cyan w-full block text-center">BOOK THIS</a>
+        <div class="mb-4"><span class="font-heading font-black text-2xl neon-green">₹24,999</span><span class="text-muted-vr text-xs ml-2">for group</span></div>
+        <a href="#group-booking" class="btn-solid-green w-full block text-center">BOOK THIS</a>
       </div>
       <div class="cyber-card p-6 reveal" data-delay="200">
         <div class="text-3xl mb-4">🥂</div>
         <span class="badge badge-yellow mb-3 inline-block">CELEBRATIONS</span>
         <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">VIP SQUAD NIGHT</h3>
         <ul class="text-muted-vr text-xs space-y-2 mb-6">
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>Up to 12 players</li>
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>1 exclusive VR mission</li>
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>Party lounge reservation</li>
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>Welcome drinks package</li>
-          <li class="flex gap-2"><span class="text-cyan-400">▸</span>Late-night slot available</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>Up to 12 players</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>1 exclusive VR mission</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>Party lounge reservation</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>Welcome drinks package</li>
+          <li class="flex gap-2"><span class="text-green-400">▸</span>Late-night slot available</li>
         </ul>
         <div class="mb-4"><span class="font-heading font-black text-2xl neon-yellow">₹8,999</span><span class="text-muted-vr text-xs ml-2">for group</span></div>
-        <a href="#group-booking" class="btn-neon-cyan w-full block text-center">BOOK THIS</a>
+        <a href="#group-booking" class="btn-neon-green w-full block text-center">BOOK THIS</a>
       </div>
     </div>
   </div>
@@ -144,10 +144,10 @@
       <div class="reveal-right">
         <div class="cyber-card p-8 text-center">
           <div class="text-6xl mb-4 float">🎮</div>
-          <h3 class="font-heading font-bold text-xl dark:text-white text-gray-900 mb-3 neon-cyan">LOUNGE IS INCLUDED</h3>
+          <h3 class="font-heading font-bold text-xl dark:text-white text-gray-900 mb-3 neon-green">LOUNGE IS INCLUDED</h3>
           <p class="text-muted-vr text-sm mb-6">All group packages include VIP Lounge access for up to 30 guests for pre/post celebrations.</p>
           <div class="grid grid-cols-3 gap-4">
-            <div class="text-center"><div class="font-heading text-2xl font-black neon-cyan">30</div><div class="text-xs font-mono text-muted-vr">GUESTS</div></div>
+            <div class="text-center"><div class="font-heading text-2xl font-black neon-green">30</div><div class="text-xs font-mono text-muted-vr">GUESTS</div></div>
             <div class="text-center"><div class="font-heading text-2xl font-black neon-magenta">3hrs</div><div class="text-xs font-mono text-muted-vr">TABLE TIME</div></div>
             <div class="text-center"><div class="font-heading text-2xl font-black neon-yellow">FREE</div><div class="text-xs font-mono text-muted-vr">WITH PKG</div></div>
           </div>
@@ -167,15 +167,15 @@
     </div>
     <div class="max-w-2xl mx-auto">
       <form data-validate class="cyber-card p-8 space-y-5">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <div><label class="cyber-label">Your Name *</label><input type="text" class="cyber-input" placeholder="Rohit Sharma" required/></div>
           <div><label class="cyber-label">Organisation / Group</label><input type="text" class="cyber-input" placeholder="Tata Steel, Batch of 2024"/></div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <div><label class="cyber-label">Email *</label><input type="email" class="cyber-input" placeholder="missions@yourco.com" required/></div>
           <div><label class="cyber-label">Phone *</label><input type="tel" class="cyber-input" placeholder="+91 98765 43210" required/></div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <div><label class="cyber-label">Number of Players *</label><input type="number" class="cyber-input" placeholder="10 – 60" min="10" max="60" required/></div>
           <div>
             <label class="cyber-label">Event Type *</label>
@@ -187,7 +187,7 @@
         </div>
         <div><label class="cyber-label">Preferred Date &amp; Time</label><input type="datetime-local" class="cyber-input"/></div>
         <div><label class="cyber-label">Special Requirements</label><textarea class="cyber-input resize-none" rows="3" placeholder="Dietary needs, accessibility, custom theming..."></textarea></div>
-        <button type="submit" class="btn-solid-cyan w-full py-4">SUBMIT INQUIRY</button>
+        <button type="submit" class="btn-solid-green w-full py-4">SUBMIT INQUIRY</button>
         <p class="text-xs text-muted-vr text-center">We respond within 24 hours. Urgent: +91 98765 43210</p>
       </form>
     </div>
@@ -212,16 +212,20 @@
       <h2 class="section-title text-2xl sm:text-3xl dark:text-white text-gray-900 mb-4">EVENT SUCCESS STORIES</h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="cyber-card p-6 reveal"><p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"We used NeonEscape for our Q4 team offsite. 35 employees loved it from CEO to interns. The custom leaderboard was a hit. Will definitely re-book."</p><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-cyan-400/20 border border-cyan-400/30 flex items-center justify-center text-xs font-mono text-cyan-400">RS</div><div><div class="text-xs font-heading dark:text-white text-gray-800">Ravi Shankar, HR Director</div><div class="text-xs font-mono text-gray-500">Steel Authority of India</div></div></div></div>
+      <div class="cyber-card p-6 reveal"><p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"We used NeonEscape for our Q4 team offsite. 35 employees loved it from CEO to interns. The custom leaderboard was a hit. Will definitely re-book."</p><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-green-400/20 border border-green-400/30 flex items-center justify-center text-xs font-mono text-green-400">RS</div><div><div class="text-xs font-heading dark:text-white text-gray-800">Ravi Shankar, HR Director</div><div class="text-xs font-mono text-gray-500">Steel Authority of India</div></div></div></div>
       <div class="cyber-card p-6 reveal" data-delay="100"><p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Best birthday party I've ever thrown. The neon decor, VR missions, and the Game Master made it absolutely unforgettable. 10/10."</p><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-fuchsia-400/20 border border-fuchsia-400/30 flex items-center justify-center text-xs font-mono text-fuchsia-400">NK</div><div><div class="text-xs font-heading dark:text-white text-gray-800">Nandini K.</div><div class="text-xs font-mono text-gray-500">Birthday Party Host</div></div></div></div>
       <div class="cyber-card p-6 reveal" data-delay="200"><p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Our alumni reunion of 50 people was perfectly handled. Three missions running simultaneously, no chaos. The spectator screen was genius."</p><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-yellow-400/20 border border-yellow-400/30 flex items-center justify-center text-xs font-mono text-yellow-400">AM</div><div><div class="text-xs font-heading dark:text-white text-gray-800">Abhay M.</div><div class="text-xs font-mono text-gray-500">NIT Rourkela Batch 2019</div></div></div></div>
     </div>
   </div>
 </section>
 
-<footer class="py-12 border-t dark:border-cyan-900/30 border-blue-100">
-  <div class="container-vr"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10"><div><div class="flex items-center gap-2 mb-4"><div class="w-7 h-7 relative flex-shrink-0"><div class="absolute inset-0 border-2 border-cyan-400 rotate-45"></div><div class="absolute inset-2 bg-cyan-400 rotate-45"></div></div><span class="font-heading font-black text-base tracking-widest neon-cyan">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span></div><p class="text-muted-vr text-xs leading-relaxed">Rourkela's premier VR escape room arena. Wireless. Immersive. Unforgettable.</p></div><div><h4 class="cyber-label mb-4">QUICK LINKS</h4><div class="flex flex-col gap-2"><a href="rooms.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">The Rooms</a><a href="services.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">Pricing</a><a href="about.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">About Us</a><a href="contact.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-cyan-400 transition-colors">Contact</a></div></div><div><h4 class="cyber-label mb-4">FIND US</h4><p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed mb-2">📍 Cyber Hub, Sector 4<br/>Rourkela, Odisha 769001</p><p class="text-xs dark:text-gray-400 text-gray-500 mb-2">📞 +91 98765 43210</p></div><div><h4 class="cyber-label mb-4">ARENA HOURS</h4><div class="flex flex-col gap-1.5"><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Mon – Thu</span><span class="font-mono neon-cyan">12:00–22:00</span></div><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Fri – Sat</span><span class="font-mono neon-cyan">11:00–00:00</span></div><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Sunday</span><span class="font-mono neon-cyan">11:00–22:00</span></div></div></div></div><div class="cyber-hr mb-6"></div><p class="text-xs dark:text-gray-600 text-gray-400 font-mono text-center">© 2025 NEONESCAPE VR. ALL RIGHTS RESERVED.</p></div>
+<footer class="py-12 border-t dark:border-green-900/30 border-gray-100">
+  <div class="container-vr"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10"><div><div class="flex items-center gap-2 mb-4"><div class="w-7 h-7 relative flex-shrink-0"><div class="absolute inset-0 border-2 border-green-400 rotate-45"></div><div class="absolute inset-2 bg-green-400 rotate-45"></div></div><span class="font-heading font-black text-base tracking-widest neon-green">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span></div><p class="text-muted-vr text-xs leading-relaxed">Rourkela's premier VR escape room arena. Wireless. Immersive. Unforgettable.</p></div><div><h4 class="cyber-label mb-4">QUICK LINKS</h4><div class="flex flex-col gap-2"><a href="rooms.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">The Rooms</a><a href="services.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">Pricing</a><a href="about.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">About Us</a><a href="contact.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">Contact</a></div></div><div><h4 class="cyber-label mb-4">FIND US</h4><p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed mb-2">📍 Cyber Hub, Sector 4<br/>Rourkela, Odisha 769001</p><p class="text-xs dark:text-gray-400 text-gray-500 mb-2">📞 +91 98765 43210</p></div><div><h4 class="cyber-label mb-4">ARENA HOURS</h4><div class="flex flex-col gap-1.5"><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Mon – Thu</span><span class="font-mono neon-green">12:00–22:00</span></div><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Fri – Sat</span><span class="font-mono neon-green">11:00–00:00</span></div><div class="flex justify-between text-xs"><span class="dark:text-gray-400 text-gray-500">Sunday</span><span class="font-mono neon-green">11:00–22:00</span></div></div></div></div><div class="cyber-hr mb-6"></div><p class="text-xs dark:text-gray-600 text-gray-400 font-mono text-center">© 2026 NEONESCAPE VR. ALL RIGHTS RESERVED.</p></div>
 </footer>
 <script src="main.js"></script>
 </body>
 </html>
+
+
+
+
