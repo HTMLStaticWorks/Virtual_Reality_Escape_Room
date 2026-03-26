@@ -331,36 +331,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // RTL Toggle button
-    const rtlBtn = document.createElement('button');
-    rtlBtn.id = 'rtl-toggle';
-    rtlBtn.className = 'fab-btn fab-rtl';
-    rtlBtn.setAttribute('aria-label', 'Toggle RTL layout');
-    rtlBtn.title = 'Toggle RTL';
-    rtlBtn.innerHTML = `<span style="font-size:0.6rem;font-weight:700;letter-spacing:0.05em;">RTL</span>`;
-
-    // Restore RTL state from storage
-    const savedDir = localStorage.getItem('vr-dir');
-    if (savedDir === 'rtl') {
-      html.setAttribute('dir', 'rtl');
-      rtlBtn.classList.add('active');
-    }
-
-    rtlBtn.addEventListener('click', () => {
-      const isRTL = html.getAttribute('dir') === 'rtl';
-      if (isRTL) {
-        html.removeAttribute('dir');
-        localStorage.setItem('vr-dir', 'ltr');
-        rtlBtn.classList.remove('active');
-      } else {
-        html.setAttribute('dir', 'rtl');
-        localStorage.setItem('vr-dir', 'rtl');
-        rtlBtn.classList.add('active');
-      }
-    });
-
     fabGroup.appendChild(backToTop);
-    fabGroup.appendChild(rtlBtn);
     document.body.appendChild(fabGroup);
 
     // Show/hide Back to Top on scroll
@@ -371,6 +342,33 @@
         backToTop.classList.remove('visible');
       }
     }, { passive: true });
+  }
+
+  /* ── RTL Toggle (Navbar) ── */
+  function initRTLToggle() {
+    const rtlToggles = document.querySelectorAll('#rtl-toggle, #rtl-toggle-mobile');
+    
+    // Restore RTL state from storage
+    const savedDir = localStorage.getItem('vr-dir');
+    if (savedDir === 'rtl') {
+      html.setAttribute('dir', 'rtl');
+      rtlToggles.forEach(btn => btn.classList.add('active'));
+    }
+
+    rtlToggles.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isRTL = html.getAttribute('dir') === 'rtl';
+        if (isRTL) {
+          html.removeAttribute('dir');
+          localStorage.setItem('vr-dir', 'ltr');
+          rtlToggles.forEach(b => b.classList.remove('active'));
+        } else {
+          html.setAttribute('dir', 'rtl');
+          localStorage.setItem('vr-dir', 'rtl');
+          rtlToggles.forEach(b => b.classList.add('active'));
+        }
+      });
+    });
   }
 
   /* ── Init All ── */
@@ -387,6 +385,7 @@
     initLeaderboard();
     initForms();
     initFloatingButtons();
+    initRTLToggle();
   });
 
 })();

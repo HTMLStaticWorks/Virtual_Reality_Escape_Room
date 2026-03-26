@@ -15,9 +15,9 @@
 <nav class="nav-glass fixed top-0 left-0 right-0 z-50 border-b dark:border-green-900/50 border-gray-100">
   <div class="container-vr overflow-x-auto">
     <div class="flex items-center h-16 gap-6 md:gap-8 min-w-max">
-      <a href="index.html" class="flex items-center gap-2 flex-shrink-0 mr-4 group">
-        <div class="w-6 h-6 relative"><div class="absolute inset-0 border-2 border-green-400 rotate-45 group-hover:bg-green-400/20 transition-colors"></div></div>
-        <span class="font-heading font-black text-xs tracking-widest text-muted-vr group-hover:text-green-400 transition-colors">EXIT RECORD</span>
+      <a href="index.html" class="flex items-center gap-2 flex-shrink-0 mr-6 group">
+        <div class="w-8 h-8 relative"><div class="absolute inset-0 border-2 border-green-400 rotate-45 neon-pulse group-hover:bg-green-400/20 transition-colors"></div><div class="absolute inset-2 bg-green-400 rotate-45"></div></div>
+        <span class="font-heading font-black text-lg tracking-widest neon-green">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span>
       </a>
       <div class="flex items-center gap-6 pb-0">
         <a href="#overview" class="text-xs font-mono dark:text-gray-300 hover:text-green-400 transition-colors py-2">OVERVIEW</a>
@@ -26,6 +26,10 @@
         <a href="#squad" class="text-xs font-mono dark:text-gray-400 text-gray-600 hover:text-green-400 transition-colors py-2">SQUAD</a>
         <a href="#stats" class="text-xs font-mono dark:text-gray-400 text-gray-600 hover:text-green-400 transition-colors py-2">STATS</a>
         <a href="#avatar" class="text-xs font-mono dark:text-gray-400 text-gray-600 hover:text-green-400 transition-colors py-2">AVATAR</a>
+        <div class="h-4 w-px bg-gray-300 dark:bg-green-900/50 mx-2"></div>
+        <button id="theme-toggle" class="dark:text-gray-300 text-gray-600 hover:text-green-400 transition-colors" aria-label="Toggle theme"></button>
+        <button id="rtl-toggle" class="text-xs font-mono dark:text-gray-300 text-gray-600 hover:text-green-400 transition-colors py-2 font-bold" aria-label="Toggle RTL">RTL</button>
+        <a href="index.html" class="btn-neon-magenta text-xs px-3 py-1.5 ml-2">LOGOUT</a>
       </div>
     </div>
   </div>

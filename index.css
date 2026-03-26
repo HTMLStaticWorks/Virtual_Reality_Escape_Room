@@ -650,7 +650,7 @@ html:not(.dark) .filter-btn:hover, html:not(.dark) .filter-btn.active {
   padding: 2rem;
   transition: var(--transition);
 }
-.price-card.featured::before {
+.featured::before {
   content: 'MOST POPULAR';
   position: absolute;
   top: -12px; left: 50%;
