@@ -946,3 +946,12 @@ html:not(.dark) .fab-btn {
   border-radius: 2px;
 }
 
+/* ── Footer & Contact Table Light Mode Contrast Fix ── */
+/* Ensures neon-green text (like Arena Hours) is readable on light backgrounds */
+html:not(.dark) footer .neon-green,
+html:not(.dark) .neon-green {
+  /* Using Tailwind green-700 for high contrast */
+  color: #047857 !important; 
+  text-shadow: none !important;
+  font-weight: 700 !important;
+}
