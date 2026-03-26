@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="NeonEscape VR — Rourkela's most immersive Virtual Reality Escape Room. Book your mission today. Wireless VR, haptic vests, retro-futuristic cyberpunk arenas."/>
-  <meta name="keywords" content="VR escape room, virtual reality, Rourkela, cyberpunk, neon arcade, team building"/>
-  <meta property="og:title" content="NeonEscape VR — Book Your Mission"/>
-  <meta property="og:description" content="Rourkela's premier VR escape room. Wireless headsets, haptic vests, infinite virtual worlds."/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="NeonEscape VR — Rourkela's most immersive Virtual Reality Escape Room. Book your mission today. Wireless VR, haptic vests, retro-futuristic cyberpunk arenas." />
+  <meta name="keywords" content="VR escape room, virtual reality, Rourkela, cyberpunk, neon arcade, team building" />
+  <meta property="og:title" content="NeonEscape VR — Book Your Mission" />
+  <meta property="og:description"
+    content="Rourkela's premier VR escape room. Wireless headsets, haptic vests, infinite virtual worlds." />
   <title>NeonEscape VR — The Portal | Home</title>
-  <link rel="stylesheet" href="index.css"/>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={darkMode:'class'}</script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
   <style>
     .hero-bg {
       background-image: url('img-hero-main.png');
@@ -20,467 +23,610 @@
       background-attachment: fixed;
       min-height: 100vh;
     }
-    .marquee-track { display:flex; animation:ticker 36s linear infinite; width:max-content; }
-    .marquee-track:hover { animation-play-state:paused; }
+
+    .marquee-track {
+      display: flex;
+      animation: ticker 36s linear infinite;
+      width: max-content;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
   </style>
 </head>
+
 <body class="page-bg min-h-screen">
 
-<!-- ══════════════════════════
+  <!-- ══════════════════════════
      NAVIGATION
 ══════════════════════════ -->
-<nav id="main-nav" class="nav-glass fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-  <div class="container-vr">
-    <div class="flex items-center justify-between h-16">
+  <nav id="main-nav" class="nav-glass fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="container-vr">
+      <div class="flex items-center justify-between h-16">
 
-      <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-2 flex-shrink-0 mr-6">
-        <div class="w-8 h-8 relative">
-          <div class="absolute inset-0 border-2 border-green-400 rotate-45 neon-pulse"></div>
-          <div class="absolute inset-2 bg-green-400 rotate-45"></div>
-        </div>
-        <span class="font-heading font-black text-lg tracking-widest neon-green hidden sm:block">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span>
-      </a>
-
-      <!-- Desktop Nav -->
-      <div class="hidden xl:flex items-center gap-8">
-        <div class="relative group"><button class="nav-link active flex items-center gap-1">HOME <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></button><div class="absolute top-full left-0 mt-1 w-32 dark:bg-gray-950 bg-white border dark:border-green-900/50 border-gray-100 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1"><a href="index.html" class="block px-4 py-2 text-xs font-mono tracking-wider neon-green">HOME</a><a href="home-2.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-green-400 hover:bg-green-400/5 transition-colors">HOME 2</a></div></div>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="rooms.html" class="nav-link">The Rooms</a>
-        <a href="collections.html" class="nav-link">Collections</a>
-        <a href="leaderboards.html" class="nav-link">Leaderboards</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="dashboard.html" class="nav-link">Dashboard</a>
-        <a href="signup.html" class="nav-link">Signup</a>
-        <button id="theme-toggle" class="ml-2 dark:text-gray-300 text-gray-600 hover:text-green-400 transition-colors" aria-label="Toggle theme"></button>
-        <a href="rooms.html" class="btn-solid-green text-xs nav-btn">BOOK NOW</a>
-      </div>
-
-      <!-- Mobile: theme + hamburger -->
-      <div class="flex xl:hidden items-center gap-3">
-        <button id="theme-toggle-mobile" class="dark:text-gray-300 text-gray-600 hover:text-green-400 transition-colors" aria-label="Toggle theme"></button>
-        <button id="hamburger" class="dark:text-gray-300 text-gray-700 p-2" aria-label="Open menu" aria-expanded="false">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<!-- Mobile Menu Overlay -->
-<div id="mobile-overlay" class="hidden fixed inset-0 bg-black/60 z-40 backdrop-blur-sm"></div>
-
-<!-- Mobile Slide-in Menu -->
-<aside id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-72 z-50 dark:bg-gray-950 bg-white border-r dark:border-green-900/50 border-gray-200 flex flex-col">
-  <div class="flex items-center justify-between p-5 border-b dark:border-green-900/50 border-gray-100">
-    <span class="font-heading font-black text-base tracking-widest neon-green">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span>
-    <button id="mobile-close" class="dark:text-gray-400 text-gray-600 hover:text-green-400">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-    </button>
-  </div>
-  <nav class="flex flex-col p-5 gap-1 flex-1 overflow-y-auto">
-    <div class="border-b dark:border-gray-800 border-gray-100"><p class="text-xs font-mono tracking-widest dark:text-gray-500 text-gray-400 pt-2.5 pb-1">HOME</p><a href="index.html" class="nav-link py-2 pl-4 block text-xs border-b dark:border-gray-800 border-gray-100">↳ Home</a><a href="home-2.html" class="nav-link py-2 pl-4 block text-xs">↳ Home 2</a></div>
-    <a href="services.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Services</a>
-    <a href="rooms.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">The Rooms</a>
-    <a href="collections.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Collections</a>
-    <a href="leaderboards.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Leaderboards</a>
-    <a href="about.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">About</a>
-    <a href="contact.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Contact</a>
-    <a href="dashboard.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Dashboard</a>
-    <a href="signup.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Signup</a>
-  </nav>
-  <div class="p-5 border-t dark:border-green-900/50 border-gray-100">
-    <a href="rooms.html" class="btn-solid-green w-full block text-center">BOOK NOW</a>
-  </div>
-</aside>
-
-<!-- ══════════════════════════
-     HERO SECTION
-══════════════════════════ -->
-<section class="hero-bg scanlines vhs-grain relative flex items-center justify-center" style="min-height:100vh;">
-  <div class="hero-overlay absolute inset-0"></div>
-  <!-- Cyber grid overlay -->
-  <div class="cyber-grid absolute inset-0 opacity-40"></div>
-
-  <div class="container-vr relative z-10 text-center pt-20 pb-16">
-    <div class="hero-animate hero-animate-d1">
-      <p class="section-tag justify-center mb-4">
-        <span>// SYSTEM ONLINE</span>
-      </p>
-    </div>
-    <h1 class="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl hero-animate hero-animate-d2 mb-6">
-      <span class="holographic">ESCAPE</span>
-      <br/>
-      <span class="dark:text-white text-gray-900">THE</span>
-      <br/>
-      <span class="neon-green glitch">MATRIX</span>
-    </h1>
-    <p class="hero-subtext max-w-xl mx-auto text-base sm:text-lg hero-animate hero-animate-d3 mb-8 font-mono">
-      Rourkela's most immersive VR escape room — wireless headsets, haptic vests,<br class="hidden sm:block"/> infinite virtual worlds. <span class="neon-green">Your mission starts now.</span>
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center hero-animate hero-animate-d4">
-      <a href="rooms.html" class="btn-solid-green text-base px-8 py-4">⚡ BOOK YOUR ESCAPE</a>
-      <a href="rooms.html" class="btn-neon-green text-base px-8 py-4">VIEW MISSIONS</a>
-    </div>
-    <!-- Stats bar -->
-    <div class="mt-16 grid grid-cols-3 gap-6 max-w-md mx-auto">
-      <div class="hero-animate hero-animate-d4">
-        <div class="stat-num">500+</div>
-        <div class="text-xs font-mono dark:text-gray-500 text-gray-500 tracking-widest mt-1">PLAYERS</div>
-      </div>
-      <div class="hero-animate hero-animate-d4">
-        <div class="stat-num">12</div>
-        <div class="text-xs font-mono dark:text-gray-500 text-gray-500 tracking-widest mt-1">MISSIONS</div>
-      </div>
-      <div class="hero-animate hero-animate-d4">
-        <div class="stat-num">98%</div>
-        <div class="text-xs font-mono dark:text-gray-500 text-gray-500 tracking-widest mt-1">RATED ★★★★★</div>
-      </div>
-    </div>
-  </div>
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-    <span class="text-xs font-mono text-green-400/60 tracking-widest">SCROLL</span>
-    <svg class="w-5 h-5 text-green-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-  </div>
-</section>
-
-<!-- ══════════════════════════
-     TICKER BAR
-══════════════════════════ -->
-<div class="dark:bg-green-400 bg-green-600 py-2.5 overflow-hidden">
-  <div class="marquee-track">
-    <span class="text-black font-mono text-xs font-bold tracking-widest px-8">⚡ NEW MISSION: CYBER HEIST 2.0 — NOW LIVE</span>
-    <span class="text-black font-mono text-xs font-bold tracking-widest px-8">★ WEEKDAY SPECIAL: 20% OFF ALL BOOKINGS</span>
-    <span class="text-black font-mono text-xs font-bold tracking-widest px-8">🏆 MONTHLY TOURNAMENT — REGISTER NOW</span>
-    <span class="text-black font-mono text-xs font-bold tracking-widest px-8">🎮 BIRTHDAY PARTY PACKAGES AVAILABLE</span>
-    <span class="text-black font-mono text-xs font-bold tracking-widest px-8">⚡ NEW MISSION: CYBER HEIST 2.0 — NOW LIVE</span>
-    <span class="text-black font-mono text-xs font-bold tracking-widest px-8">★ WEEKDAY SPECIAL: 20% OFF ALL BOOKINGS</span>
-    <span class="text-black font-mono text-xs font-bold tracking-widest px-8">🏆 MONTHLY TOURNAMENT — REGISTER NOW</span>
-    <span class="text-black font-mono text-xs font-bold tracking-widest px-8">🎮 BIRTHDAY PARTY PACKAGES AVAILABLE</span>
-  </div>
-</div>
-
-<!-- ══════════════════════════
-     FEATURED ROOMS
-══════════════════════════ -->
-<section class="section-py page-bg">
-  <div class="container-vr">
-    <div class="text-center mb-12 reveal">
-      <p class="section-tag justify-center mb-3">NOW TRENDING</p>
-      <h2 class="section-title text-3xl sm:text-4xl dark:text-white text-gray-900 mb-4">TOP MISSIONS</h2>
-      <p class="text-muted-vr max-w-lg mx-auto text-sm">Our most-played VR escape rooms — each one a mind-bending journey.</p>
-    </div>
-    <div class="grid-rooms">
-      <!-- Room 1 -->
-      <div class="cyber-card reveal" data-delay="0">
-        <div class="room-card-img">
-          <img src="img-room-scifi.png" alt="Cyber Heist 2.0 — Sci-Fi VR Room"/>
-          <div class="room-overlay"></div>
-          <div class="absolute bottom-3 left-3 right-3 z-10">
-            <div class="flex gap-2 mb-2">
-              <span class="badge badge-green">SCI-FI</span>
-              <span class="badge badge-magenta">5 PLAYERS</span>
-            </div>
-            <div class="flex gap-0.5">
-              <span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star text-xs">★</span>
-            </div>
-          </div>
-        </div>
-        <div class="p-5">
-          <h3 class="font-heading font-bold text-base dark:text-white text-gray-900 mb-2">CYBER HEIST 2.0</h3>
-          <p class="text-muted-vr text-xs mb-4">Defuse a quantum cyber-bomb buried deep within a neon megacorporation's mainframe. 60 minutes. Zero mercy.</p>
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono text-green-400">67% ESCAPE RATE</span>
-            <a href="rooms.html" class="btn-neon-green text-xs px-4 py-2">MISSION BRIEF</a>
-          </div>
-        </div>
-      </div>
-      <!-- Room 2 -->
-      <div class="cyber-card reveal" data-delay="100">
-        <div class="room-card-img">
-          <img src="img-room-horror.png" alt="Haunted Mainframe — Horror VR Room"/>
-          <div class="room-overlay"></div>
-          <div class="absolute bottom-3 left-3 right-3 z-10">
-            <div class="flex gap-2 mb-2">
-              <span class="badge badge-magenta">HORROR</span>
-              <span class="badge badge-green">2-4 PLAYERS</span>
-            </div>
-            <div class="flex gap-0.5">
-              <span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span>
-            </div>
-          </div>
-        </div>
-        <div class="p-5">
-          <h3 class="font-heading font-bold text-base dark:text-white text-gray-900 mb-2">HAUNTED MAINFRAME</h3>
-          <p class="text-muted-vr text-xs mb-4">Something's lurking in the digital ruins. Navigate a corrupted VR dimension haunted by glitching AI entities.</p>
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono neon-magenta">41% ESCAPE RATE</span>
-            <a href="rooms.html" class="btn-neon-magenta text-xs px-4 py-2">MISSION BRIEF</a>
-          </div>
-        </div>
-      </div>
-      <!-- Room 3 -->
-      <div class="cyber-card reveal" data-delay="200">
-        <div class="room-card-img">
-          <img src="img-room-adventure.png" alt="Neon Temple — Adventure VR Room"/>
-          <div class="room-overlay"></div>
-          <div class="absolute bottom-3 left-3 right-3 z-10">
-            <div class="flex gap-2 mb-2">
-              <span class="badge badge-yellow">ADVENTURE</span>
-              <span class="badge badge-green">2-6 PLAYERS</span>
-            </div>
-            <div class="flex gap-0.5">
-              <span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star active text-xs">★</span><span class="star text-xs">★</span><span class="star text-xs">★</span>
-            </div>
-          </div>
-        </div>
-        <div class="p-5">
-          <h3 class="font-heading font-bold text-base dark:text-white text-gray-900 mb-2">NEON TEMPLE</h3>
-          <p class="text-muted-vr text-xs mb-4">Ancient ruins electrified by alien technology. Solve holographic puzzles, traverse floating islands, and claim the crystal relic.</p>
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono text-green-400">82% ESCAPE RATE</span>
-            <a href="rooms.html" class="btn-neon-green text-xs px-4 py-2">MISSION BRIEF</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="text-center mt-10 reveal">
-      <a href="rooms.html" class="btn-neon-green">VIEW ALL 12 MISSIONS →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════
-     HOW IT WORKS
-══════════════════════════ -->
-<section class="section-py section-bg-alt cyber-grid">
-  <div class="container-vr">
-    <div class="text-center mb-12 reveal">
-      <p class="section-tag justify-center mb-3">THE PROCESS</p>
-      <h2 class="section-title text-3xl sm:text-4xl dark:text-white text-gray-900 mb-4">HOW IT WORKS</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-      <!-- connector line desktop -->
-      <div class="hidden md:block absolute top-7 left-1/4 right-1/4 h-px bg-gradient-to-r from-green-400 via-fuchsia-500 to-green-400 opacity-30"></div>
-      <!-- Step 1 -->
-      <div class="flex flex-col items-center text-center reveal" data-delay="0">
-        <div class="step-circle mb-5">1</div>
-        <div class="neon-divider mx-auto"></div>
-        <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">GEAR UP</h3>
-        <p class="text-muted-vr text-sm max-w-xs">Our Game Masters set you up with wireless Quest headsets & haptic vests. Sign your digital waiver. Grab a briefing on your mission objectives.</p>
-      </div>
-      <!-- Step 2 -->
-      <div class="flex flex-col items-center text-center reveal" data-delay="150">
-        <div class="step-circle mb-5" style="border-color:var(--neon-magenta);color:var(--neon-magenta);box-shadow:var(--glow-magenta)">2</div>
-        <div class="neon-divider mx-auto" style="background:linear-gradient(90deg,var(--neon-magenta),var(--neon-green))"></div>
-        <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">ENTER THE MATRIX</h3>
-        <p class="text-muted-vr text-sm max-w-xs">Step into your chosen virtual world. 360° immersion with spatial audio, hand-tracking, and haptic feedback that makes every puzzle feel real.</p>
-      </div>
-      <!-- Step 3 -->
-      <div class="flex flex-col items-center text-center reveal" data-delay="300">
-        <div class="step-circle mb-5" style="border-color:var(--neon-yellow);color:var(--neon-yellow);box-shadow:var(--glow-yellow)">3</div>
-        <div class="neon-divider mx-auto" style="background:linear-gradient(90deg,var(--neon-green),var(--neon-yellow))"></div>
-        <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">ESCAPE</h3>
-        <p class="text-muted-vr text-sm max-w-xs">Beat the clock, crack the puzzles, and complete your mission. Your escape time is logged to the global leaderboard. Will you be top 10?</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════
-     PLAYER TRANSMISSIONS (REVIEWS)
-══════════════════════════ -->
-<section class="section-py page-bg overflow-hidden">
-  <div class="container-vr">
-    <div class="text-center mb-12 reveal">
-      <p class="section-tag justify-center mb-3">PLAYER TRANSMISSIONS</p>
-      <h2 class="section-title text-3xl sm:text-4xl dark:text-white text-gray-900 mb-4">WHAT PLAYERS SAY</h2>
-    </div>
-  </div>
-  <!-- Infinite scroll testimonials -->
-  <div class="ticker-wrap mb-6">
-    <div class="ticker-track">
-      <!-- Review cards -->
-      <div class="testimonial-card cyber-card mx-3 p-5">
-        <div class="flex gap-1 mb-3">★★★★★</div>
-        <p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Cyber Heist absolutely melted my brain. The holographic interface felt 100% REAL. I completely forgot I was in a real room. Best 60 minutes of my life."</p>
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-green-400/20 border border-green-400/30 flex items-center justify-center text-xs font-mono text-green-400">AK</div>
-          <div><div class="text-xs font-heading dark:text-white text-gray-800">ARYAN_K</div><div class="text-xs font-mono text-gray-500">Rourkela</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card cyber-card mx-3 p-5">
-        <div class="flex gap-1 mb-3 text-yellow-400">★★★★★</div>
-        <p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Me and my squad did Haunted Mainframe and SCREAMED the entire time. The glitching ghost jumpscare got us all. We're coming back for the horror pack!"</p>
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-fuchsia-400/20 border border-fuchsia-400/30 flex items-center justify-center text-xs font-mono text-fuchsia-400">PS</div>
-          <div><div class="text-xs font-heading dark:text-white text-gray-800">PRIYA_S</div><div class="text-xs font-mono text-gray-500">Bhubaneswar</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card cyber-card mx-3 p-5">
-        <div class="flex gap-1 mb-3 text-yellow-400">★★★★★</div>
-        <p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Used NeonEscape for our company team-building. The whole team loved it — way better than paintball or bowling. The corporate package was seamlessly organized."</p>
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-green-400/20 border border-green-400/30 flex items-center justify-center text-xs font-mono text-green-400">RM</div>
-          <div><div class="text-xs font-heading dark:text-white text-gray-800">ROHIT_MGR</div><div class="text-xs font-mono text-gray-500">Tata Steel, Jamshedpur</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card cyber-card mx-3 p-5">
-        <div class="flex gap-1 mb-3 text-yellow-400">★★★★★</div>
-        <p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Neon Temple was breathtaking — the floating islands and bioluminescent jungle looked like something from a AAA video game. My jaw dropped at every turn."</p>
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-yellow-400/20 border border-yellow-400/30 flex items-center justify-center text-xs font-mono text-yellow-400">SJ</div>
-          <div><div class="text-xs font-heading dark:text-white text-gray-800">SNEHA_J</div><div class="text-xs font-mono text-gray-500">Rourkela</div></div>
-        </div>
-      </div>
-      <!-- Duplicate for seamless loop -->
-      <div class="testimonial-card cyber-card mx-3 p-5">
-        <div class="flex gap-1 mb-3">★★★★★</div>
-        <p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Cyber Heist absolutely melted my brain. The holographic interface felt 100% REAL. I completely forgot I was in a real room. Best 60 minutes of my life."</p>
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-green-400/20 border border-green-400/30 flex items-center justify-center text-xs font-mono text-green-400">AK</div>
-          <div><div class="text-xs font-heading dark:text-white text-gray-800">ARYAN_K</div><div class="text-xs font-mono text-gray-500">Rourkela</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card cyber-card mx-3 p-5">
-        <div class="flex gap-1 mb-3 text-yellow-400">★★★★★</div>
-        <p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Me and my squad did Haunted Mainframe and SCREAMED the entire time. The glitching ghost jumpscare got us all. We're coming back for the horror pack!"</p>
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-fuchsia-400/20 border border-fuchsia-400/30 flex items-center justify-center text-xs font-mono text-fuchsia-400">PS</div>
-          <div><div class="text-xs font-heading dark:text-white text-gray-800">PRIYA_S</div><div class="text-xs font-mono text-gray-500">Bhubaneswar</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════
-     THE TECH
-══════════════════════════ -->
-<section class="section-py section-bg-alt">
-  <div class="container-vr">
-    <div class="text-center mb-12 reveal">
-      <p class="section-tag justify-center mb-3">THE HARDWARE</p>
-      <h2 class="section-title text-3xl sm:text-4xl dark:text-white text-gray-900 mb-4">CUTTING EDGE TECH</h2>
-      <p class="text-muted-vr max-w-lg mx-auto text-sm">We run the best consumer VR hardware available — because your immersion is everything.</p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="cyber-card p-6 text-center reveal" data-delay="0">
-        <div class="text-4xl mb-4">🥽</div>
-        <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-2">WIRELESS HEADSETS</h3>
-        <p class="text-muted-vr text-xs">Meta Quest Pro — no cables, no limits. Full 360° freedom of movement.</p>
-      </div>
-      <div class="cyber-card p-6 text-center reveal" data-delay="100">
-        <div class="text-4xl mb-4">🦺</div>
-        <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-2">HAPTIC VESTS</h3>
-        <p class="text-muted-vr text-xs">bHaptics TactSuit — feel every explosion, heartbeat, and crawling entity.</p>
-      </div>
-      <div class="cyber-card p-6 text-center reveal" data-delay="200">
-        <div class="text-4xl mb-4">🖐️</div>
-        <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-2">HAND TRACKING</h3>
-        <p class="text-muted-vr text-xs">Room-scale tracking with sub-millimetre precision. Your hands ARE the controller.</p>
-      </div>
-      <div class="cyber-card p-6 text-center reveal" data-delay="300">
-        <div class="text-4xl mb-4">🔊</div>
-        <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-2">SPATIAL AUDIO</h3>
-        <p class="text-muted-vr text-xs">3D sound from every direction — enemies, puzzles, and ambience all around you.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════
-     CTA BANNER
-══════════════════════════ -->
-<section class="py-20 relative overflow-hidden">
-  <div class="absolute inset-0" style="background:linear-gradient(135deg, rgba(0,245,255,0.1) 0%, rgba(255,0,255,0.1) 100%);"></div>
-  <div class="cyber-grid absolute inset-0"></div>
-  <div class="container-vr relative z-10 text-center reveal">
-    <h2 class="section-title text-3xl sm:text-4xl md:text-5xl dark:text-white text-gray-900 mb-6">
-      READY TO <span class="neon-green">ESCAPE</span>?
-    </h2>
-    <p class="text-muted-vr mb-8 max-w-md mx-auto">Slots fill up fast. Book your VR mission now and secure your time in the arena.</p>
-    <a href="rooms.html" class="btn-solid-green text-lg px-12 py-5 neon-pulse inline-block">⚡ BOOK YOUR MISSION</a>
-  </div>
-</section>
-
-<!-- ══════════════════════════
-     FOOTER
-══════════════════════════ -->
-<footer class="py-12 border-t dark:border-green-900/30 border-gray-100">
-  <div class="container-vr">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-      <!-- Brand -->
-      <div>
-        <div class="flex items-center gap-2 mb-4">
-          <div class="w-7 h-7 relative flex-shrink-0">
-            <div class="absolute inset-0 border-2 border-green-400 rotate-45"></div>
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 flex-shrink-0 mr-6">
+          <div class="w-8 h-8 relative">
+            <div class="absolute inset-0 border-2 border-green-400 rotate-45 neon-pulse"></div>
             <div class="absolute inset-2 bg-green-400 rotate-45"></div>
           </div>
-          <span class="font-heading font-black text-base tracking-widest neon-green">NEON<span class="dark:text-white text-gray-800">ESCAPE</span></span>
-        </div>
-        <p class="text-muted-vr text-xs leading-relaxed mb-4">Rourkela's premier VR escape room arena. Wireless. Immersive. Unforgettable.</p>
-        <div class="flex gap-3">
-          <a href="#" class="w-8 h-8 border dark:border-green-900/50 border-gray-200 flex items-center justify-center dark:text-gray-400 text-gray-500 hover:border-green-400 hover:text-green-400 transition-colors text-xs"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.975.975 1.247 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.31 3.608-.975.975-2.242 1.247-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.31-.975-.975-1.247-2.242-1.31-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.31-3.608.975-.975 2.242-1.247 3.608-1.31 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.435.065-2.68.35-3.674 1.344-.993.993-1.278 2.238-1.343 3.673-.058 1.281-.072 1.688-.072 4.948s.014 3.667.072 4.947c.065 1.435.35 2.68 1.343 3.674.993.993 2.238 1.279 3.673 1.343 1.28.058 1.688.072 4.948.072s3.667-.014 4.947-.072c1.435-.064 2.68-.35 3.673-1.343.994-.994 1.279-2.238 1.343-3.673.059-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.064-1.435-.35-2.68-1.343-3.674-.993-.993-2.238-1.278-3.673-1.343-1.27-.058-1.687-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-          <a href="#" class="w-8 h-8 border dark:border-green-900/50 border-gray-200 flex items-center justify-center dark:text-gray-400 text-gray-500 hover:border-green-400 hover:text-green-400 transition-colors text-xs"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-          <a href="#" class="w-8 h-8 border dark:border-green-900/50 border-gray-200 flex items-center justify-center dark:text-gray-400 text-gray-500 hover:border-fuchsia-400 hover:text-fuchsia-400 transition-colors text-xs"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.419 0 1.334-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.419 0 1.334-.946 2.419-2.157 2.419z"/></svg></a>
-          <a href="#" class="w-8 h-8 border dark:border-green-900/50 border-gray-200 flex items-center justify-center dark:text-gray-400 text-gray-500 hover:border-magenta-400 hover:text-fuchsia-400 transition-colors text-xs"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-        </div>
-      </div>
-      <!-- Quick Links -->
-      <div>
-        <h4 class="cyber-label mb-4">QUICK LINKS</h4>
-        <div class="flex flex-col gap-2">
-          <a href="rooms.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">The Rooms</a>
-          <a href="services.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">Pricing & Services</a>
-          <a href="leaderboards.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">Leaderboards</a>
-          <a href="dashboard.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">Player Dashboard</a>
-          <a href="about.html" class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">About Us</a>
-        </div>
-      </div>
-      <!-- Location -->
-      <div>
-        <h4 class="cyber-label mb-4">FIND US</h4>
-        <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed mb-2">📍 Cyber Hub, Sector 4<br/>Rourkela, Odisha 769001</p>
-        <p class="text-xs dark:text-gray-400 text-gray-500 mb-2">📞 +91 98765 43210</p>
-        <p class="text-xs dark:text-gray-400 text-gray-500">✉️ missions@neonescape.in</p>
-      </div>
-      <!-- Hours -->
-      <div>
-        <h4 class="cyber-label mb-4">ARENA HOURS</h4>
-        <div class="flex flex-col gap-1.5">
-          <div class="flex justify-between text-xs">
-            <span class="dark:text-gray-400 text-gray-500">Mon – Thu</span><span class="font-mono neon-green">12:00 – 22:00</span>
+          <span class="font-heading font-black text-lg tracking-widest neon-green hidden sm:block">NEON<span
+              class="dark:text-white text-gray-800">ESCAPE</span></span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden xl:flex items-center gap-5">
+          <div class="relative group"><button class="nav-link active flex items-center gap-1">HOME <svg
+                class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg></button>
+            <div
+              class="absolute top-full left-0 mt-1 w-32 dark:bg-gray-950 bg-white border dark:border-green-900/50 border-gray-100 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1">
+              <a href="index.html" class="block px-4 py-2 text-xs font-mono tracking-wider neon-green">HOME</a><a
+                href="home-2.html"
+                class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-green-400 hover:bg-green-400/5 transition-colors">HOME
+                2</a></div>
           </div>
-          <div class="flex justify-between text-xs">
-            <span class="dark:text-gray-400 text-gray-500">Fri – Sat</span><span class="font-mono neon-green">11:00 – 00:00</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="dark:text-gray-400 text-gray-500">Sunday</span><span class="font-mono neon-green">11:00 – 22:00</span>
-          </div>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="rooms.html" class="nav-link">The Rooms</a>
+          <a href="collections.html" class="nav-link">Collections</a>
+          <a href="leaderboards.html" class="nav-link">Leaderboards</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="signup.html" class="nav-link">Signup</a>
+          <button id="theme-toggle" class="ml-2 dark:text-gray-300 text-gray-600 hover:text-green-400 transition-colors"
+            aria-label="Toggle theme"></button>
+          <a href="rooms.html" class="btn-solid-green text-xs nav-btn">BOOK NOW</a>
+        </div>
+
+        <!-- Mobile: theme + hamburger -->
+        <div class="flex xl:hidden items-center gap-3">
+          <button id="theme-toggle-mobile"
+            class="dark:text-gray-300 text-gray-600 hover:text-green-400 transition-colors"
+            aria-label="Toggle theme"></button>
+          <button id="hamburger" class="dark:text-gray-300 text-gray-700 p-2" aria-label="Open menu"
+            aria-expanded="false">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
-    <div class="cyber-hr mb-6"></div>
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-xs dark:text-gray-600 text-gray-400 font-mono">© 2026 NEONESCAPE VR. ALL RIGHTS RESERVED.</p>
-      <div class="flex gap-4">
-        <a href="#" class="text-xs dark:text-gray-600 text-gray-400 hover:text-green-400 transition-colors">Privacy Policy</a>
-        <a href="#" class="text-xs dark:text-gray-600 text-gray-400 hover:text-green-400 transition-colors">Terms of Service</a>
-        <a href="#" class="text-xs dark:text-gray-600 text-gray-400 hover:text-green-400 transition-colors">Sitemap</a>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-overlay" class="hidden fixed inset-0 bg-black/60 z-40 backdrop-blur-sm"></div>
+
+  <!-- Mobile Slide-in Menu -->
+  <aside id="mobile-menu"
+    class="mobile-menu fixed top-0 left-0 h-full w-72 z-50 dark:bg-gray-950 bg-white border-r dark:border-green-900/50 border-gray-200 flex flex-col">
+    <div class="flex items-center justify-between p-5 border-b dark:border-green-900/50 border-gray-100">
+      <span class="font-heading font-black text-base tracking-widest neon-green">NEON<span
+          class="dark:text-white text-gray-800">ESCAPE</span></span>
+      <button id="mobile-close" class="dark:text-gray-400 text-gray-600 hover:text-green-400">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col p-5 gap-1 flex-1 overflow-y-auto">
+      <div class="border-b dark:border-gray-800 border-gray-100">
+        <p class="text-xs font-mono tracking-widest dark:text-gray-500 text-gray-400 pt-2.5 pb-1">HOME</p><a
+          href="index.html" class="nav-link py-2 pl-4 block text-xs border-b dark:border-gray-800 border-gray-100">↳
+          Home</a><a href="home-2.html" class="nav-link py-2 pl-4 block text-xs">↳ Home 2</a>
       </div>
+      <a href="services.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Services</a>
+      <a href="rooms.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">The Rooms</a>
+      <a href="collections.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Collections</a>
+      <a href="leaderboards.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Leaderboards</a>
+      <a href="about.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">About</a>
+      <a href="contact.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Contact</a>
+      <a href="dashboard.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Dashboard</a>
+      <a href="signup.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Signup</a>
+    </nav>
+    <div class="p-5 border-t dark:border-green-900/50 border-gray-100">
+      <a href="rooms.html" class="btn-solid-green w-full block text-center">BOOK NOW</a>
+    </div>
+  </aside>
+
+  <!-- ══════════════════════════
+     HERO SECTION
+══════════════════════════ -->
+  <section class="hero-bg scanlines vhs-grain relative flex items-center justify-center" style="min-height:100vh;">
+    <div class="hero-overlay absolute inset-0"></div>
+    <!-- Cyber grid overlay -->
+    <div class="cyber-grid absolute inset-0 opacity-40"></div>
+
+    <div class="container-vr relative z-10 text-center pt-20 pb-16">
+      <div class="hero-animate hero-animate-d1">
+        <p class="section-tag justify-center mb-4">
+          <span>// SYSTEM ONLINE</span>
+        </p>
+      </div>
+      <h1 class="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl hero-animate hero-animate-d2 mb-6">
+        <span class="holographic">ESCAPE</span>
+        <br />
+        <span class="dark:text-white text-gray-900">THE</span>
+        <br />
+        <span class="neon-green glitch">MATRIX</span>
+      </h1>
+      <p class="hero-subtext max-w-xl mx-auto text-base sm:text-lg hero-animate hero-animate-d3 mb-8 font-mono">
+        Rourkela's most immersive VR escape room — wireless headsets, haptic vests,<br class="hidden sm:block" />
+        infinite virtual worlds. <span class="neon-green">Your mission starts now.</span>
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center hero-animate hero-animate-d4">
+        <a href="rooms.html" class="btn-solid-green text-base px-8 py-4">⚡ BOOK YOUR ESCAPE</a>
+        <a href="rooms.html" class="btn-neon-green text-base px-8 py-4">VIEW MISSIONS</a>
+      </div>
+      <!-- Stats bar -->
+      <div class="mt-16 grid grid-cols-3 gap-6 max-w-md mx-auto">
+        <div class="hero-animate hero-animate-d4">
+          <div class="stat-num">500+</div>
+          <div class="text-xs font-mono dark:text-gray-500 text-gray-500 tracking-widest mt-1">PLAYERS</div>
+        </div>
+        <div class="hero-animate hero-animate-d4">
+          <div class="stat-num">12</div>
+          <div class="text-xs font-mono dark:text-gray-500 text-gray-500 tracking-widest mt-1">MISSIONS</div>
+        </div>
+        <div class="hero-animate hero-animate-d4">
+          <div class="stat-num">98%</div>
+          <div class="text-xs font-mono dark:text-gray-500 text-gray-500 tracking-widest mt-1">RATED ★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+      <span class="text-xs font-mono text-green-400/60 tracking-widest">SCROLL</span>
+      <svg class="w-5 h-5 text-green-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+     TICKER BAR
+══════════════════════════ -->
+  <div class="dark:bg-green-400 bg-green-600 py-2.5 overflow-hidden">
+    <div class="marquee-track">
+      <span class="text-black font-mono text-xs font-bold tracking-widest px-8">⚡ NEW MISSION: CYBER HEIST 2.0 — NOW
+        LIVE</span>
+      <span class="text-black font-mono text-xs font-bold tracking-widest px-8">★ WEEKDAY SPECIAL: 20% OFF ALL
+        BOOKINGS</span>
+      <span class="text-black font-mono text-xs font-bold tracking-widest px-8">🏆 MONTHLY TOURNAMENT — REGISTER
+        NOW</span>
+      <span class="text-black font-mono text-xs font-bold tracking-widest px-8">🎮 BIRTHDAY PARTY PACKAGES
+        AVAILABLE</span>
+      <span class="text-black font-mono text-xs font-bold tracking-widest px-8">⚡ NEW MISSION: CYBER HEIST 2.0 — NOW
+        LIVE</span>
+      <span class="text-black font-mono text-xs font-bold tracking-widest px-8">★ WEEKDAY SPECIAL: 20% OFF ALL
+        BOOKINGS</span>
+      <span class="text-black font-mono text-xs font-bold tracking-widest px-8">🏆 MONTHLY TOURNAMENT — REGISTER
+        NOW</span>
+      <span class="text-black font-mono text-xs font-bold tracking-widest px-8">🎮 BIRTHDAY PARTY PACKAGES
+        AVAILABLE</span>
     </div>
   </div>
-</footer>
 
-<script src="main.js"></script>
+  <!-- ══════════════════════════
+     FEATURED ROOMS
+══════════════════════════ -->
+  <section class="section-py page-bg">
+    <div class="container-vr">
+      <div class="text-center mb-12 reveal">
+        <p class="section-tag justify-center mb-3">NOW TRENDING</p>
+        <h2 class="section-title text-3xl sm:text-4xl dark:text-white text-gray-900 mb-4">TOP MISSIONS</h2>
+        <p class="text-muted-vr max-w-lg mx-auto text-sm">Our most-played VR escape rooms — each one a mind-bending
+          journey.</p>
+      </div>
+      <div class="grid-rooms">
+        <!-- Room 1 -->
+        <div class="cyber-card reveal" data-delay="0">
+          <div class="room-card-img">
+            <img src="img-room-scifi.png" alt="Cyber Heist 2.0 — Sci-Fi VR Room" />
+            <div class="room-overlay"></div>
+            <div class="absolute bottom-3 left-3 right-3 z-10">
+              <div class="flex gap-2 mb-2">
+                <span class="badge badge-green">SCI-FI</span>
+                <span class="badge badge-magenta">5 PLAYERS</span>
+              </div>
+              <div class="flex gap-0.5">
+                <span class="star active text-xs">★</span><span class="star active text-xs">★</span><span
+                  class="star active text-xs">★</span><span class="star active text-xs">★</span><span
+                  class="star text-xs">★</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-heading font-bold text-base dark:text-white text-gray-900 mb-2">CYBER HEIST 2.0</h3>
+            <p class="text-muted-vr text-xs mb-4">Defuse a quantum cyber-bomb buried deep within a neon
+              megacorporation's mainframe. 60 minutes. Zero mercy.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-green-400">67% ESCAPE RATE</span>
+              <a href="rooms.html" class="btn-neon-green text-xs px-4 py-2">MISSION BRIEF</a>
+            </div>
+          </div>
+        </div>
+        <!-- Room 2 -->
+        <div class="cyber-card reveal" data-delay="100">
+          <div class="room-card-img">
+            <img src="img-room-horror.png" alt="Haunted Mainframe — Horror VR Room" />
+            <div class="room-overlay"></div>
+            <div class="absolute bottom-3 left-3 right-3 z-10">
+              <div class="flex gap-2 mb-2">
+                <span class="badge badge-magenta">HORROR</span>
+                <span class="badge badge-green">2-4 PLAYERS</span>
+              </div>
+              <div class="flex gap-0.5">
+                <span class="star active text-xs">★</span><span class="star active text-xs">★</span><span
+                  class="star active text-xs">★</span><span class="star active text-xs">★</span><span
+                  class="star active text-xs">★</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-heading font-bold text-base dark:text-white text-gray-900 mb-2">HAUNTED MAINFRAME</h3>
+            <p class="text-muted-vr text-xs mb-4">Something's lurking in the digital ruins. Navigate a corrupted VR
+              dimension haunted by glitching AI entities.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono neon-magenta">41% ESCAPE RATE</span>
+              <a href="rooms.html" class="btn-neon-magenta text-xs px-4 py-2">MISSION BRIEF</a>
+            </div>
+          </div>
+        </div>
+        <!-- Room 3 -->
+        <div class="cyber-card reveal" data-delay="200">
+          <div class="room-card-img">
+            <img src="img-room-adventure.png" alt="Neon Temple — Adventure VR Room" />
+            <div class="room-overlay"></div>
+            <div class="absolute bottom-3 left-3 right-3 z-10">
+              <div class="flex gap-2 mb-2">
+                <span class="badge badge-yellow">ADVENTURE</span>
+                <span class="badge badge-green">2-6 PLAYERS</span>
+              </div>
+              <div class="flex gap-0.5">
+                <span class="star active text-xs">★</span><span class="star active text-xs">★</span><span
+                  class="star active text-xs">★</span><span class="star text-xs">★</span><span
+                  class="star text-xs">★</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-heading font-bold text-base dark:text-white text-gray-900 mb-2">NEON TEMPLE</h3>
+            <p class="text-muted-vr text-xs mb-4">Ancient ruins electrified by alien technology. Solve holographic
+              puzzles, traverse floating islands, and claim the crystal relic.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-green-400">82% ESCAPE RATE</span>
+              <a href="rooms.html" class="btn-neon-green text-xs px-4 py-2">MISSION BRIEF</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-10 reveal">
+        <a href="rooms.html" class="btn-neon-green">VIEW ALL 12 MISSIONS →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+     HOW IT WORKS
+══════════════════════════ -->
+  <section class="section-py section-bg-alt cyber-grid">
+    <div class="container-vr">
+      <div class="text-center mb-12 reveal">
+        <p class="section-tag justify-center mb-3">THE PROCESS</p>
+        <h2 class="section-title text-3xl sm:text-4xl dark:text-white text-gray-900 mb-4">HOW IT WORKS</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <!-- connector line desktop -->
+        <div
+          class="hidden md:block absolute top-7 left-1/4 right-1/4 h-px bg-gradient-to-r from-green-400 via-fuchsia-500 to-green-400 opacity-30">
+        </div>
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center text-center reveal" data-delay="0">
+          <div class="step-circle mb-5">1</div>
+          <div class="neon-divider mx-auto"></div>
+          <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">GEAR UP</h3>
+          <p class="text-muted-vr text-sm max-w-xs">Our Game Masters set you up with wireless Quest headsets & haptic
+            vests. Sign your digital waiver. Grab a briefing on your mission objectives.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center text-center reveal" data-delay="150">
+          <div class="step-circle mb-5"
+            style="border-color:var(--neon-magenta);color:var(--neon-magenta);box-shadow:var(--glow-magenta)">2</div>
+          <div class="neon-divider mx-auto"
+            style="background:linear-gradient(90deg,var(--neon-magenta),var(--neon-green))"></div>
+          <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">ENTER THE MATRIX</h3>
+          <p class="text-muted-vr text-sm max-w-xs">Step into your chosen virtual world. 360° immersion with spatial
+            audio, hand-tracking, and haptic feedback that makes every puzzle feel real.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="flex flex-col items-center text-center reveal" data-delay="300">
+          <div class="step-circle mb-5"
+            style="border-color:var(--neon-yellow);color:var(--neon-yellow);box-shadow:var(--glow-yellow)">3</div>
+          <div class="neon-divider mx-auto"
+            style="background:linear-gradient(90deg,var(--neon-green),var(--neon-yellow))"></div>
+          <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">ESCAPE</h3>
+          <p class="text-muted-vr text-sm max-w-xs">Beat the clock, crack the puzzles, and complete your mission. Your
+            escape time is logged to the global leaderboard. Will you be top 10?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+     PLAYER TRANSMISSIONS (REVIEWS)
+══════════════════════════ -->
+  <section class="section-py page-bg overflow-hidden">
+    <div class="container-vr">
+      <div class="text-center mb-12 reveal">
+        <p class="section-tag justify-center mb-3">PLAYER TRANSMISSIONS</p>
+        <h2 class="section-title text-3xl sm:text-4xl dark:text-white text-gray-900 mb-4">WHAT PLAYERS SAY</h2>
+      </div>
+    </div>
+    <!-- Infinite scroll testimonials -->
+    <div class="ticker-wrap mb-6">
+      <div class="ticker-track">
+        <!-- Review cards -->
+        <div class="testimonial-card cyber-card mx-3 p-5">
+          <div class="flex gap-1 mb-3">★★★★★</div>
+          <p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Cyber Heist absolutely melted my brain. The
+            holographic interface felt 100% REAL. I completely forgot I was in a real room. Best 60 minutes of my life."
+          </p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-green-400/20 border border-green-400/30 flex items-center justify-center text-xs font-mono text-green-400">
+              AK</div>
+            <div>
+              <div class="text-xs font-heading dark:text-white text-gray-800">ARYAN_K</div>
+              <div class="text-xs font-mono text-gray-500">Rourkela</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card cyber-card mx-3 p-5">
+          <div class="flex gap-1 mb-3 text-yellow-400">★★★★★</div>
+          <p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Me and my squad did Haunted Mainframe and
+            SCREAMED the entire time. The glitching ghost jumpscare got us all. We're coming back for the horror pack!"
+          </p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-fuchsia-400/20 border border-fuchsia-400/30 flex items-center justify-center text-xs font-mono text-fuchsia-400">
+              PS</div>
+            <div>
+              <div class="text-xs font-heading dark:text-white text-gray-800">PRIYA_S</div>
+              <div class="text-xs font-mono text-gray-500">Bhubaneswar</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card cyber-card mx-3 p-5">
+          <div class="flex gap-1 mb-3 text-yellow-400">★★★★★</div>
+          <p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Used NeonEscape for our company
+            team-building. The whole team loved it — way better than paintball or bowling. The corporate package was
+            seamlessly organized."</p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-green-400/20 border border-green-400/30 flex items-center justify-center text-xs font-mono text-green-400">
+              RM</div>
+            <div>
+              <div class="text-xs font-heading dark:text-white text-gray-800">ROHIT_MGR</div>
+              <div class="text-xs font-mono text-gray-500">Tata Steel, Jamshedpur</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card cyber-card mx-3 p-5">
+          <div class="flex gap-1 mb-3 text-yellow-400">★★★★★</div>
+          <p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Neon Temple was breathtaking — the floating
+            islands and bioluminescent jungle looked like something from a AAA video game. My jaw dropped at every
+            turn."</p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-yellow-400/20 border border-yellow-400/30 flex items-center justify-center text-xs font-mono text-yellow-400">
+              SJ</div>
+            <div>
+              <div class="text-xs font-heading dark:text-white text-gray-800">SNEHA_J</div>
+              <div class="text-xs font-mono text-gray-500">Rourkela</div>
+            </div>
+          </div>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="testimonial-card cyber-card mx-3 p-5">
+          <div class="flex gap-1 mb-3">★★★★★</div>
+          <p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Cyber Heist absolutely melted my brain. The
+            holographic interface felt 100% REAL. I completely forgot I was in a real room. Best 60 minutes of my life."
+          </p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-green-400/20 border border-green-400/30 flex items-center justify-center text-xs font-mono text-green-400">
+              AK</div>
+            <div>
+              <div class="text-xs font-heading dark:text-white text-gray-800">ARYAN_K</div>
+              <div class="text-xs font-mono text-gray-500">Rourkela</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card cyber-card mx-3 p-5">
+          <div class="flex gap-1 mb-3 text-yellow-400">★★★★★</div>
+          <p class="text-sm dark:text-gray-300 text-gray-600 italic mb-4">"Me and my squad did Haunted Mainframe and
+            SCREAMED the entire time. The glitching ghost jumpscare got us all. We're coming back for the horror pack!"
+          </p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-fuchsia-400/20 border border-fuchsia-400/30 flex items-center justify-center text-xs font-mono text-fuchsia-400">
+              PS</div>
+            <div>
+              <div class="text-xs font-heading dark:text-white text-gray-800">PRIYA_S</div>
+              <div class="text-xs font-mono text-gray-500">Bhubaneswar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+     THE TECH
+══════════════════════════ -->
+  <section class="section-py section-bg-alt">
+    <div class="container-vr">
+      <div class="text-center mb-12 reveal">
+        <p class="section-tag justify-center mb-3">THE HARDWARE</p>
+        <h2 class="section-title text-3xl sm:text-4xl dark:text-white text-gray-900 mb-4">CUTTING EDGE TECH</h2>
+        <p class="text-muted-vr max-w-lg mx-auto text-sm">We run the best consumer VR hardware available — because your
+          immersion is everything.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="cyber-card p-6 text-center reveal" data-delay="0">
+          <div class="text-4xl mb-4">🥽</div>
+          <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-2">WIRELESS HEADSETS</h3>
+          <p class="text-muted-vr text-xs">Meta Quest Pro — no cables, no limits. Full 360° freedom of movement.</p>
+        </div>
+        <div class="cyber-card p-6 text-center reveal" data-delay="100">
+          <div class="text-4xl mb-4">🦺</div>
+          <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-2">HAPTIC VESTS</h3>
+          <p class="text-muted-vr text-xs">bHaptics TactSuit — feel every explosion, heartbeat, and crawling entity.</p>
+        </div>
+        <div class="cyber-card p-6 text-center reveal" data-delay="200">
+          <div class="text-4xl mb-4">🖐️</div>
+          <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-2">HAND TRACKING</h3>
+          <p class="text-muted-vr text-xs">Room-scale tracking with sub-millimetre precision. Your hands ARE the
+            controller.</p>
+        </div>
+        <div class="cyber-card p-6 text-center reveal" data-delay="300">
+          <div class="text-4xl mb-4">🔊</div>
+          <h3 class="font-heading font-bold text-sm dark:text-white text-gray-900 mb-2">SPATIAL AUDIO</h3>
+          <p class="text-muted-vr text-xs">3D sound from every direction — enemies, puzzles, and ambience all around
+            you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+     CTA BANNER
+══════════════════════════ -->
+  <section class="py-20 relative overflow-hidden">
+    <div class="absolute inset-0"
+      style="background:linear-gradient(135deg, rgba(0,245,255,0.1) 0%, rgba(255,0,255,0.1) 100%);"></div>
+    <div class="cyber-grid absolute inset-0"></div>
+    <div class="container-vr relative z-10 text-center reveal">
+      <h2 class="section-title text-3xl sm:text-4xl md:text-5xl dark:text-white text-gray-900 mb-6">
+        READY TO <span class="neon-green">ESCAPE</span>?
+      </h2>
+      <p class="text-muted-vr mb-8 max-w-md mx-auto">Slots fill up fast. Book your VR mission now and secure your time
+        in the arena.</p>
+      <a href="rooms.html" class="btn-solid-green text-lg px-12 py-5 neon-pulse inline-block">⚡ BOOK YOUR MISSION</a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+     FOOTER
+══════════════════════════ -->
+  <footer class="py-12 border-t dark:border-green-900/30 border-gray-100">
+    <div class="container-vr">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-7 h-7 relative flex-shrink-0">
+              <div class="absolute inset-0 border-2 border-green-400 rotate-45"></div>
+              <div class="absolute inset-2 bg-green-400 rotate-45"></div>
+            </div>
+            <span class="font-heading font-black text-base tracking-widest neon-green">NEON<span
+                class="dark:text-white text-gray-800">ESCAPE</span></span>
+          </div>
+          <p class="text-muted-vr text-xs leading-relaxed mb-4">Rourkela's premier VR escape room arena. Wireless.
+            Immersive. Unforgettable.</p>
+          <div class="flex gap-3">
+            <a href="#"
+              class="w-8 h-8 border dark:border-green-900/50 border-gray-200 flex items-center justify-center dark:text-gray-400 text-gray-500 hover:border-green-400 hover:text-green-400 transition-colors text-xs"><svg
+                class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.975.975 1.247 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.31 3.608-.975.975-2.242 1.247-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.31-.975-.975-1.247-2.242-1.31-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.31-3.608.975-.975 2.242-1.247 3.608-1.31 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.435.065-2.68.35-3.674 1.344-.993.993-1.278 2.238-1.343 3.673-.058 1.281-.072 1.688-.072 4.948s.014 3.667.072 4.947c.065 1.435.35 2.68 1.343 3.674.993.993 2.238 1.279 3.673 1.343 1.28.058 1.688.072 4.948.072s3.667-.014 4.947-.072c1.435-.064 2.68-.35 3.673-1.343.994-.994 1.279-2.238 1.343-3.673.059-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.064-1.435-.35-2.68-1.343-3.674-.993-.993-2.238-1.278-3.673-1.343-1.27-.058-1.687-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg></a>
+            <a href="#"
+              class="w-8 h-8 border dark:border-green-900/50 border-gray-200 flex items-center justify-center dark:text-gray-400 text-gray-500 hover:border-green-400 hover:text-green-400 transition-colors text-xs"><svg
+                class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg></a>
+            <a href="#"
+              class="w-8 h-8 border dark:border-green-900/50 border-gray-200 flex items-center justify-center dark:text-gray-400 text-gray-500 hover:border-fuchsia-400 hover:text-fuchsia-400 transition-colors text-xs"><svg
+                class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.419 0 1.334-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.419 0 1.334-.946 2.419-2.157 2.419z" />
+              </svg></a>
+            <a href="#"
+              class="w-8 h-8 border dark:border-green-900/50 border-gray-200 flex items-center justify-center dark:text-gray-400 text-gray-500 hover:border-magenta-400 hover:text-fuchsia-400 transition-colors text-xs"><svg
+                class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg></a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="cyber-label mb-4">QUICK LINKS</h4>
+          <div class="flex flex-col gap-2">
+            <a href="rooms.html"
+              class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">The Rooms</a>
+            <a href="services.html"
+              class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">Pricing &
+              Services</a>
+            <a href="leaderboards.html"
+              class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">Leaderboards</a>
+            <a href="dashboard.html"
+              class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">Player
+              Dashboard</a>
+            <a href="about.html"
+              class="text-xs dark:text-gray-400 text-gray-500 hover:text-green-400 transition-colors">About Us</a>
+          </div>
+        </div>
+        <!-- Location -->
+        <div>
+          <h4 class="cyber-label mb-4">FIND US</h4>
+          <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed mb-2">📍 Cyber Hub, Sector 4<br />Rourkela,
+            Odisha 769001</p>
+          <p class="text-xs dark:text-gray-400 text-gray-500 mb-2">📞 +91 98765 43210</p>
+          <p class="text-xs dark:text-gray-400 text-gray-500">✉️ missions@neonescape.in</p>
+        </div>
+        <!-- Hours -->
+        <div>
+          <h4 class="cyber-label mb-4">ARENA HOURS</h4>
+          <div class="flex flex-col gap-1.5">
+            <div class="flex justify-between text-xs">
+              <span class="dark:text-gray-400 text-gray-500">Mon – Thu</span><span class="font-mono neon-green">12:00 –
+                22:00</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="dark:text-gray-400 text-gray-500">Fri – Sat</span><span class="font-mono neon-green">11:00 –
+                00:00</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="dark:text-gray-400 text-gray-500">Sunday</span><span class="font-mono neon-green">11:00 –
+                22:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cyber-hr mb-6"></div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs dark:text-gray-600 text-gray-400 font-mono">© 2026 NEONESCAPE VR. ALL RIGHTS RESERVED.</p>
+        <div class="flex gap-4">
+          <a href="#" class="text-xs dark:text-gray-600 text-gray-400 hover:text-green-400 transition-colors">Privacy
+            Policy</a>
+          <a href="#" class="text-xs dark:text-gray-600 text-gray-400 hover:text-green-400 transition-colors">Terms of
+            Service</a>
+          <a href="#"
+            class="text-xs dark:text-gray-600 text-gray-400 hover:text-green-400 transition-colors">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
-
-
-
-
