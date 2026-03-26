@@ -38,8 +38,7 @@
                 class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-green-400 hover:bg-green-400/5 transition-colors">HOME
                 2</a></div>
           </div><a href="services.html" class="nav-link active">Services</a><a href="rooms.html" class="nav-link">The
-            Rooms</a><a href="collections.html" class="nav-link">Collections</a><a href="leaderboards.html"
-            class="nav-link">Leaderboards</a><a href="about.html" class="nav-link">About</a><a href="contact.html"
+            Rooms</a><div class="relative group"><button class="nav-link flex items-center gap-1">PAGES <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg></button><div class="absolute top-full left-0 mt-1 w-40 dark:bg-gray-950 bg-white border dark:border-green-900/50 border-gray-100 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1"><a href="collections.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-green-400 hover:bg-green-400/5 transition-colors">COLLECTIONS</a><a href="leaderboards.html" class="block px-4 py-2 text-xs font-mono tracking-wider dark:text-gray-300 text-gray-700 hover:text-green-400 hover:bg-green-400/5 transition-colors">LEADERBOARDS</a></div></div><a href="about.html" class="nav-link">About</a><a href="contact.html"
             class="nav-link">Contact</a><a href="dashboard.html" class="nav-link">Dashboard</a><a href="signup.html"
             class="nav-link">Signup</a>
           <button id="theme-toggle" class="ml-2 dark:text-gray-300 text-gray-600 hover:text-green-400 transition-colors"
@@ -74,10 +73,7 @@
           href="index.html" class="nav-link py-2 pl-4 block text-xs border-b dark:border-gray-800 border-gray-100">↳
           Home</a><a href="home-2.html" class="nav-link py-2 pl-4 block text-xs">↳ Home 2</a>
       </div><a href="services.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Services</a><a
-        href="rooms.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">The Rooms</a><a
-        href="collections.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Collections</a><a
-        href="leaderboards.html"
-        class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Leaderboards</a><a href="about.html"
+        href="rooms.html" class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">The Rooms</a><div class="border-b dark:border-gray-800 border-gray-100"><p class="text-xs font-mono tracking-widest dark:text-gray-500 text-gray-400 pt-2.5 pb-1">PAGES</p><a href="collections.html" class="nav-link py-2 pl-4 block text-xs border-b dark:border-gray-800 border-gray-100">↳ Collections</a><a href="leaderboards.html" class="nav-link py-2 pl-4 block text-xs">↳ Leaderboards</a></div><a href="about.html"
         class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">About</a><a href="contact.html"
         class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Contact</a><a href="dashboard.html"
         class="nav-link py-2.5 border-b dark:border-gray-800 border-gray-100">Dashboard</a><a href="signup.html"
@@ -106,49 +102,46 @@
         <h2 class="section-title text-3xl sm:text-4xl dark:text-white text-gray-900 mb-4">STANDARD ADMISSION</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-        <div class="cyber-card price-card reveal">
+        <div class="cyber-card price-card reveal flex flex-col items-center text-center">
           <div class="text-3xl mb-4">🕹️</div>
           <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-2">SOLO OPERATOR</h3>
-          <div class="mb-4"><span class="font-heading font-black text-3xl neon-green">₹699</span><span
-              class="text-muted-vr text-xs ml-2">/ person</span></div>
-          <ul class="text-muted-vr text-xs space-y-2 mb-6">
-            <li class="flex gap-2"><span class="text-green-400">✓</span>60-minute mission</li>
-            <li class="flex gap-2"><span class="text-green-400">✓</span>Wireless VR headset</li>
-            <li class="flex gap-2"><span class="text-green-400">✓</span>Haptic vest</li>
-            <li class="flex gap-2"><span class="text-green-400">✓</span>3 hint credits</li>
-            <li class="flex gap-2"><span class="text-green-400">✓</span>Digital stats report</li>
+          <div class="mb-4"><span class="font-heading font-black text-3xl neon-green">₹699</span><span class="text-muted-vr text-xs ml-2">/ person</span></div>
+          <ul class="text-muted-vr text-xs space-y-2 mb-6 w-full">
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>60-minute mission</li>
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>Wireless VR headset</li>
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>Haptic vest</li>
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>3 hint credits</li>
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>Digital stats report</li>
           </ul>
-          <a href="signup.html" class="btn-neon-green w-full block text-center">BOOK NOW</a>
+          <a href="signup.html" class="btn-neon-green w-full block text-center mt-auto">BOOK NOW</a>
         </div>
-        <div class="cyber-card price-card featured neon-border-cyan reveal" data-delay="100">
+        <div class="cyber-card price-card featured neon-border-cyan reveal flex flex-col items-center text-center" data-delay="100">
           <div class="text-3xl mb-4">👥</div>
           <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-2">SQUAD PACK</h3>
-          <div class="mb-4"><span class="font-heading font-black text-3xl neon-green">₹549</span><span
-              class="text-muted-vr text-xs ml-2">/ person</span></div>
+          <div class="mb-4"><span class="font-heading font-black text-3xl neon-green">₹549</span><span class="text-muted-vr text-xs ml-2">/ person</span></div>
           <p class="text-muted-vr text-xs mb-2">(Groups of 3–6)</p>
-          <ul class="text-muted-vr text-xs space-y-2 mb-6">
-            <li class="flex gap-2"><span class="text-green-400">✓</span>60-minute mission</li>
-            <li class="flex gap-2"><span class="text-green-400">✓</span>Wireless VR headset</li>
-            <li class="flex gap-2"><span class="text-green-400">✓</span>Haptic vest</li>
-            <li class="flex gap-2"><span class="text-green-400">✓</span>5 hint credits shared</li>
-            <li class="flex gap-2"><span class="text-green-400">✓</span>Group leaderboard entry</li>
+          <ul class="text-muted-vr text-xs space-y-2 mb-6 w-full">
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>60-minute mission</li>
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>Wireless VR headset</li>
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>Haptic vest</li>
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>5 hint credits shared</li>
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>Group leaderboard entry</li>
           </ul>
-          <a href="signup.html" class="btn-solid-green w-full block text-center">BOOK NOW</a>
+          <a href="signup.html" class="btn-solid-green w-full block text-center mt-auto">BOOK NOW</a>
         </div>
-        <div class="cyber-card price-card reveal" data-delay="200">
+        <div class="cyber-card price-card reveal flex flex-col items-center text-center" data-delay="200">
           <div class="text-3xl mb-4">🎂</div>
           <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-2">WEEKDAY SPECIAL</h3>
-          <div class="mb-4"><span class="font-heading font-black text-3xl neon-magenta">₹449</span><span
-              class="text-muted-vr text-xs ml-2">/ person</span></div>
+          <div class="mb-4"><span class="font-heading font-black text-3xl neon-magenta">₹449</span><span class="text-muted-vr text-xs ml-2">/ person</span></div>
           <p class="text-muted-vr text-xs mb-2">(Mon–Thu only)</p>
-          <ul class="text-muted-vr text-xs space-y-2 mb-6">
-            <li class="flex gap-2"><span class="text-green-400">✓</span>60-minute mission</li>
-            <li class="flex gap-2"><span class="text-green-400">✓</span>Wireless VR headset</li>
-            <li class="flex gap-2"><span class="text-green-400">✓</span>Haptic vest</li>
-            <li class="flex gap-2"><span class="text-green-400">✓</span>2 hint credits</li>
-            <li class="flex gap-2"><span class="text-green-400">✓</span>Walk-in welcome</li>
+          <ul class="text-muted-vr text-xs space-y-2 mb-6 w-full">
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>60-minute mission</li>
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>Wireless VR headset</li>
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>Haptic vest</li>
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>2 hint credits</li>
+            <li class="flex justify-center items-center gap-2"><span class="text-green-400">✓</span>Walk-in welcome</li>
           </ul>
-          <a href="signup.html" class="btn-neon-magenta w-full block text-center">BOOK NOW</a>
+          <a href="signup.html" class="btn-neon-magenta w-full block text-center mt-auto">BOOK NOW</a>
         </div>
       </div>
     </div>
@@ -205,12 +198,12 @@
   <section class="section-py page-bg">
     <div class="container-vr">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="reveal-left">
-          <p class="section-tag mb-4">MEMBERSHIP</p>
+        <div class="reveal-left flex flex-col items-center text-center">
+          <p class="section-tag justify-center mb-4">MEMBERSHIP</p>
           <h2 class="section-title text-3xl sm:text-4xl dark:text-white text-gray-900 mb-5">THE FREQUENT FLYER PASS</h2>
-          <p class="text-muted-vr mb-6 text-sm leading-relaxed">For VR enthusiasts who can't stay away. Our monthly
+          <p class="text-muted-vr mb-6 text-sm leading-relaxed max-w-md mx-auto">For VR enthusiasts who can't stay away. Our monthly
             membership gives you unlimited sessions at a flat rate — because one mission is never enough.</p>
-          <div class="space-y-3 mb-8">
+          <div class="space-y-3 mb-8 inline-block text-left w-fit mx-auto">
             <div class="flex items-center gap-3">
               <div
                 class="w-8 h-8 rounded-full bg-green-400/20 border border-green-400/30 flex items-center justify-center text-sm text-green-400 flex-shrink-0">
