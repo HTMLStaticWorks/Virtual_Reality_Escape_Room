@@ -868,3 +868,81 @@ html:not(.dark) .map-placeholder { background: var(--light-card2); border-color:
 .grid-rooms { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
 @media(min-width:640px){ .grid-rooms { grid-template-columns: repeat(2,1fr); } }
 @media(min-width:1024px){ .grid-rooms { grid-template-columns: repeat(3,1fr); } }
+
+/* ── Floating Action Buttons (Back to Top + RTL) ── */
+.fab-group {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  z-index: 900;
+}
+.fab-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  border: 2px solid var(--neon-green);
+  background: rgba(10, 10, 26, 0.85);
+  color: var(--neon-green);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: var(--transition);
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.3);
+}
+.fab-btn:hover {
+  background: var(--neon-green);
+  color: var(--dark-bg);
+  box-shadow: var(--glow-green);
+  transform: translateY(-2px);
+}
+.fab-btn.fab-rtl {
+  border-color: var(--neon-magenta);
+  color: var(--neon-magenta);
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.3);
+}
+.fab-btn.fab-rtl:hover {
+  background: var(--neon-magenta);
+  color: var(--dark-bg);
+  box-shadow: var(--glow-magenta);
+}
+.fab-btn.fab-rtl.active {
+  background: var(--neon-magenta);
+  color: var(--dark-bg);
+  box-shadow: var(--glow-magenta);
+}
+#back-to-top {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease, background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+html:not(.dark) .fab-btn {
+  background: rgba(240, 244, 255, 0.9);
+}
+
+/* ── Room Card Full-width Button Fix ── */
+/* clip-path on full-width buttons inside overflow:hidden cards
+   causes the diagonal left-cut to get clipped at the card edge,
+   making it look like the text is cut off ("SSION BRIEF").
+   Override: use straight rectangle for any full-width btn in a card. */
+.cyber-card .btn-neon-green,
+.cyber-card .btn-neon-magenta,
+.cyber-card .btn-solid-green {
+  clip-path: none;
+  border-radius: 2px;
+}
+

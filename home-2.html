@@ -79,47 +79,65 @@
       <p class="text-muted-vr max-w-lg mx-auto text-sm">Tailored VR experiences for every occasion. All packages include a dedicated Game Master and post-game stats.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="cyber-card p-6 reveal">
-        <div class="text-3xl mb-4">🎂</div>
-        <span class="badge badge-magenta mb-3 inline-block">BIRTHDAY PARTY</span>
-        <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">BIRTHDAY BLAST</h3>
-        <ul class="text-muted-vr text-xs space-y-2 mb-6">
-          <li class="flex gap-2"><span class="text-green-400">▸</span>Up to 20 players</li>
-          <li class="flex gap-2"><span class="text-green-400">▸</span>2 VR missions of choice</li>
-          <li class="flex gap-2"><span class="text-green-400">▸</span>VIP lounge access (2 hrs)</li>
-          <li class="flex gap-2"><span class="text-green-400">▸</span>Neon birthday banner &amp; decor</li>
-          <li class="flex gap-2"><span class="text-green-400">▸</span>Private stats leaderboard</li>
-        </ul>
-        <div class="mb-4"><span class="font-heading font-black text-2xl neon-magenta">₹12,999</span><span class="text-muted-vr text-xs ml-2">for group</span></div>
-        <a href="#group-booking" class="btn-neon-magenta w-full block text-center">BOOK THIS</a>
+      <!-- Birthday Party Card -->
+      <div class="cyber-card reveal flex flex-col overflow-hidden">
+        <div class="w-full h-44 overflow-hidden relative flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=350&fit=crop" alt="Birthday Party VR" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#111128]"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-1 text-center items-center">
+          <span class="badge badge-magenta mb-3 inline-block">BIRTHDAY PARTY</span>
+          <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">BIRTHDAY BLAST</h3>
+          <ul class="text-muted-vr text-xs space-y-2 mb-6 w-full">
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>Up to 20 players</li>
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>2 VR missions of choice</li>
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>VIP lounge access (2 hrs)</li>
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>Neon birthday banner &amp; decor</li>
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>Private stats leaderboard</li>
+          </ul>
+          <div class="mb-4 mt-auto"><span class="font-heading font-black text-2xl neon-magenta">₹12,999</span><span class="text-muted-vr text-xs ml-2">for group</span></div>
+          <a href="#group-booking" class="btn-neon-magenta w-full block text-center">BOOK THIS</a>
+        </div>
       </div>
-      <div class="cyber-card neon-border-cyan p-6 reveal price-card featured" data-delay="100">
-        <div class="text-3xl mb-4">🏢</div>
-        <span class="badge badge-green mb-3 inline-block">CORPORATE</span>
-        <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">TEAM SYNAPSE</h3>
-        <ul class="text-muted-vr text-xs space-y-2 mb-6">
-          <li class="flex gap-2"><span class="text-green-400">▸</span>Up to 40 players</li>
-          <li class="flex gap-2"><span class="text-green-400">▸</span>3 mission rotations</li>
-          <li class="flex gap-2"><span class="text-green-400">▸</span>Full arena buyout option</li>
-          <li class="flex gap-2"><span class="text-green-400">▸</span>Post-event analytics report</li>
-          <li class="flex gap-2"><span class="text-green-400">▸</span>GST invoice provided</li>
-        </ul>
-        <div class="mb-4"><span class="font-heading font-black text-2xl neon-green">₹24,999</span><span class="text-muted-vr text-xs ml-2">for group</span></div>
-        <a href="#group-booking" class="btn-solid-green w-full block text-center">BOOK THIS</a>
+      <!-- Corporate Card -->
+      <div class="cyber-card neon-border-cyan reveal price-card featured flex flex-col overflow-hidden" data-delay="100">
+        <div class="w-full h-44 overflow-hidden relative flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=350&fit=crop" alt="Corporate Team Building VR" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#111128]"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-1 text-center items-center">
+          <span class="badge badge-green mb-3 inline-block">CORPORATE</span>
+          <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">TEAM SYNAPSE</h3>
+          <ul class="text-muted-vr text-xs space-y-2 mb-6 w-full">
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>Up to 40 players</li>
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>3 mission rotations</li>
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>Full arena buyout option</li>
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>Post-event analytics report</li>
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>GST invoice provided</li>
+          </ul>
+          <div class="mb-4 mt-auto"><span class="font-heading font-black text-2xl neon-green">₹24,999</span><span class="text-muted-vr text-xs ml-2">for group</span></div>
+          <a href="#group-booking" class="btn-solid-green w-full block text-center">BOOK THIS</a>
+        </div>
       </div>
-      <div class="cyber-card p-6 reveal" data-delay="200">
-        <div class="text-3xl mb-4">🥂</div>
-        <span class="badge badge-yellow mb-3 inline-block">CELEBRATIONS</span>
-        <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">VIP SQUAD NIGHT</h3>
-        <ul class="text-muted-vr text-xs space-y-2 mb-6">
-          <li class="flex gap-2"><span class="text-green-400">▸</span>Up to 12 players</li>
-          <li class="flex gap-2"><span class="text-green-400">▸</span>1 exclusive VR mission</li>
-          <li class="flex gap-2"><span class="text-green-400">▸</span>Party lounge reservation</li>
-          <li class="flex gap-2"><span class="text-green-400">▸</span>Welcome drinks package</li>
-          <li class="flex gap-2"><span class="text-green-400">▸</span>Late-night slot available</li>
-        </ul>
-        <div class="mb-4"><span class="font-heading font-black text-2xl neon-yellow">₹8,999</span><span class="text-muted-vr text-xs ml-2">for group</span></div>
-        <a href="#group-booking" class="btn-neon-green w-full block text-center">BOOK THIS</a>
+      <!-- VIP Celebrations Card -->
+      <div class="cyber-card reveal flex flex-col overflow-hidden" data-delay="200">
+        <div class="w-full h-44 overflow-hidden relative flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=350&fit=crop" alt="VIP Celebration Party" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#111128]"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-1 text-center items-center">
+          <span class="badge badge-yellow mb-3 inline-block">CELEBRATIONS</span>
+          <h3 class="font-heading font-bold text-lg dark:text-white text-gray-900 mb-3">VIP SQUAD NIGHT</h3>
+          <ul class="text-muted-vr text-xs space-y-2 mb-6 w-full">
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>Up to 12 players</li>
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>1 exclusive VR mission</li>
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>Party lounge reservation</li>
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>Welcome drinks package</li>
+            <li class="flex gap-2 justify-center"><span class="text-green-400">▸</span>Late-night slot available</li>
+          </ul>
+          <div class="mb-4 mt-auto"><span class="font-heading font-black text-2xl neon-yellow">₹8,999</span><span class="text-muted-vr text-xs ml-2">for group</span></div>
+          <a href="#group-booking" class="btn-neon-green w-full block text-center">BOOK THIS</a>
+        </div>
       </div>
     </div>
   </div>

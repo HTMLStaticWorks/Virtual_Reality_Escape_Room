@@ -314,6 +314,65 @@
     });
   }
 
+  /* ── Floating Action Buttons (Back to Top + RTL Toggle) ── */
+  function initFloatingButtons() {
+    // Create container
+    const fabGroup = document.createElement('div');
+    fabGroup.className = 'fab-group';
+
+    // Back to Top button
+    const backToTop = document.createElement('button');
+    backToTop.id = 'back-to-top';
+    backToTop.className = 'fab-btn';
+    backToTop.setAttribute('aria-label', 'Back to top');
+    backToTop.title = 'Back to Top';
+    backToTop.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>`;
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // RTL Toggle button
+    const rtlBtn = document.createElement('button');
+    rtlBtn.id = 'rtl-toggle';
+    rtlBtn.className = 'fab-btn fab-rtl';
+    rtlBtn.setAttribute('aria-label', 'Toggle RTL layout');
+    rtlBtn.title = 'Toggle RTL';
+    rtlBtn.innerHTML = `<span style="font-size:0.6rem;font-weight:700;letter-spacing:0.05em;">RTL</span>`;
+
+    // Restore RTL state from storage
+    const savedDir = localStorage.getItem('vr-dir');
+    if (savedDir === 'rtl') {
+      html.setAttribute('dir', 'rtl');
+      rtlBtn.classList.add('active');
+    }
+
+    rtlBtn.addEventListener('click', () => {
+      const isRTL = html.getAttribute('dir') === 'rtl';
+      if (isRTL) {
+        html.removeAttribute('dir');
+        localStorage.setItem('vr-dir', 'ltr');
+        rtlBtn.classList.remove('active');
+      } else {
+        html.setAttribute('dir', 'rtl');
+        localStorage.setItem('vr-dir', 'rtl');
+        rtlBtn.classList.add('active');
+      }
+    });
+
+    fabGroup.appendChild(backToTop);
+    fabGroup.appendChild(rtlBtn);
+    document.body.appendChild(fabGroup);
+
+    // Show/hide Back to Top on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    }, { passive: true });
+  }
+
   /* ── Init All ── */
   document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
@@ -327,6 +386,7 @@
     initTypewriter();
     initLeaderboard();
     initForms();
+    initFloatingButtons();
   });
 
 })();
