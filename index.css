@@ -968,3 +968,38 @@ html:not(.dark) .neon-green {
   text-shadow: none !important;
   font-weight: 700 !important;
 }
+/* ── Authentication Page Actions ── */
+.auth-nav-actions {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 45;
+}
+html[dir="rtl"] .auth-nav-actions {
+  right: auto;
+  left: 1.5rem;
+}
+.auth-nav-actions .toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html.dark .auth-nav-actions .toggle-btn { color: var(--dark-text-muted); }
+html:not(.dark) .auth-nav-actions .toggle-btn { color: var(--light-text-muted); }
+
+html.dark .auth-nav-actions .toggle-btn:hover { color: var(--neon-green); }
+html:not(.dark) .auth-nav-actions .toggle-btn:hover { color: #1e8a0a; }
+
+.auth-nav-actions #rtl-toggle {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
