@@ -257,7 +257,7 @@ html:not(.dark) .nav-glass {
   text-transform: uppercase;
   position: relative;
   transition: var(--transition);
-  padding: 0.25rem 0.6rem;
+  padding: 0.25rem 0.4rem;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
